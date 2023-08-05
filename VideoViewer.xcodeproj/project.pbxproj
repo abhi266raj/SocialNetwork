@@ -31,6 +31,34 @@
 			remoteGlobalIDString = 6BC079772A7E4C7A00EC410A;
 			remoteInfo = VideoViewer;
 		};
+		6BC07A7B2A7E4FAA00EC410A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BC07A422A7E4F4800EC410A /* View.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BC07A2A2A7E4F4800EC410A;
+			remoteInfo = View;
+		};
+		6BC07A7D2A7E4FAA00EC410A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BC07A422A7E4F4800EC410A /* View.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BC07A322A7E4F4800EC410A;
+			remoteInfo = ViewTests;
+		};
+		6BC07A832A7E4FBA00EC410A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BC07A6D2A7E4F7600EC410A /* ViewModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BC07A552A7E4F7600EC410A;
+			remoteInfo = ViewModel;
+		};
+		6BC07A852A7E4FBA00EC410A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BC07A6D2A7E4F7600EC410A /* ViewModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BC07A5D2A7E4F7600EC410A;
+			remoteInfo = ViewModelTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +72,10 @@
 		6BC079922A7E4C7C00EC410A /* VideoViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC079962A7E4C7C00EC410A /* VideoViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewerUITests.swift; sourceTree = "<group>"; };
 		6BC079982A7E4C7C00EC410A /* VideoViewerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6BC079EC2A7E4E9A00EC410A /* Service.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Service.xcodeproj; path = ../Service/Service/Service.xcodeproj; sourceTree = "<group>"; };
+		6BC07A172A7E4F1700EC410A /* Model.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Model.xcodeproj; path = ../Model/Model/Model.xcodeproj; sourceTree = "<group>"; };
+		6BC07A422A7E4F4800EC410A /* View.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = View.xcodeproj; path = ../View/View/View.xcodeproj; sourceTree = "<group>"; };
+		6BC07A6D2A7E4F7600EC410A /* ViewModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ViewModel.xcodeproj; path = ../ViewModel/ViewModel/ViewModel.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +106,7 @@
 		6BC0796F2A7E4C7A00EC410A = {
 			isa = PBXGroup;
 			children = (
+				6BC07A762A7E4F9E00EC410A /* Subproject */,
 				6BC0797A2A7E4C7A00EC410A /* VideoViewer */,
 				6BC0798B2A7E4C7C00EC410A /* VideoViewerTests */,
 				6BC079952A7E4C7C00EC410A /* VideoViewerUITests */,
@@ -125,6 +158,35 @@
 				6BC079982A7E4C7C00EC410A /* VideoViewerUITestsLaunchTests.swift */,
 			);
 			path = VideoViewerUITests;
+			sourceTree = "<group>";
+		};
+		6BC07A762A7E4F9E00EC410A /* Subproject */ = {
+			isa = PBXGroup;
+			children = (
+				6BC07A6D2A7E4F7600EC410A /* ViewModel.xcodeproj */,
+				6BC079EC2A7E4E9A00EC410A /* Service.xcodeproj */,
+				6BC07A172A7E4F1700EC410A /* Model.xcodeproj */,
+				6BC07A422A7E4F4800EC410A /* View.xcodeproj */,
+			);
+			path = Subproject;
+			sourceTree = "<group>";
+		};
+		6BC07A772A7E4FAA00EC410A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BC07A7C2A7E4FAA00EC410A /* View.framework */,
+				6BC07A7E2A7E4FAA00EC410A /* ViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BC07A7F2A7E4FBA00EC410A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BC07A842A7E4FBA00EC410A /* ViewModel.framework */,
+				6BC07A862A7E4FBA00EC410A /* ViewModelTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +279,16 @@
 			mainGroup = 6BC0796F2A7E4C7A00EC410A;
 			productRefGroup = 6BC079792A7E4C7A00EC410A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6BC07A772A7E4FAA00EC410A /* Products */;
+					ProjectRef = 6BC07A422A7E4F4800EC410A /* View.xcodeproj */;
+				},
+				{
+					ProductGroup = 6BC07A7F2A7E4FBA00EC410A /* Products */;
+					ProjectRef = 6BC07A6D2A7E4F7600EC410A /* ViewModel.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6BC079772A7E4C7A00EC410A /* VideoViewer */,
@@ -225,6 +297,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6BC07A7C2A7E4FAA00EC410A /* View.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = View.framework;
+			remoteRef = 6BC07A7B2A7E4FAA00EC410A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6BC07A7E2A7E4FAA00EC410A /* ViewTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ViewTests.xctest;
+			remoteRef = 6BC07A7D2A7E4FAA00EC410A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6BC07A842A7E4FBA00EC410A /* ViewModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ViewModel.framework;
+			remoteRef = 6BC07A832A7E4FBA00EC410A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6BC07A862A7E4FBA00EC410A /* ViewModelTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ViewModelTests.xctest;
+			remoteRef = 6BC07A852A7E4FBA00EC410A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6BC079762A7E4C7A00EC410A /* Resources */ = {
