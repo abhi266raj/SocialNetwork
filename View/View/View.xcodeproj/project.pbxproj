@@ -27,6 +27,7 @@
 		6BC07A2D2A7E4F4800EC410A /* View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		6BC07A322A7E4F4800EC410A /* ViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07A372A7E4F4800EC410A /* ViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTests.swift; sourceTree = "<group>"; };
+		6BC07AD42A7E644B00EC410A /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 				6BC07A2C2A7E4F4800EC410A /* View */,
 				6BC07A362A7E4F4800EC410A /* ViewTests */,
 				6BC07A2B2A7E4F4800EC410A /* Products */,
+				6BC07AD32A7E644B00EC410A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +82,14 @@
 				6BC07A372A7E4F4800EC410A /* ViewTests.swift */,
 			);
 			path = ViewTests;
+			sourceTree = "<group>";
+		};
+		6BC07AD32A7E644B00EC410A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BC07AD42A7E644B00EC410A /* Service.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,9 +372,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = www.abhiraj.com.View;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -392,9 +405,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = www.abhiraj.com.View;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

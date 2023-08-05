@@ -10,6 +10,10 @@
 		6BC07A5E2A7E4F7600EC410A /* ViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07A552A7E4F7600EC410A /* ViewModel.framework */; };
 		6BC07A632A7E4F7600EC410A /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07A622A7E4F7600EC410A /* ViewModelTests.swift */; };
 		6BC07A642A7E4F7600EC410A /* ViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC07A582A7E4F7600EC410A /* ViewModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BC07AA12A7E5F9E00EC410A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07AA02A7E5F9E00EC410A /* API.swift */; };
+		6BC07AEE2A7E66D500EC410A /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07ABE2A7E625D00EC410A /* Model.framework */; };
+		6BC07AEF2A7E66D500EC410A /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07ABE2A7E625D00EC410A /* Model.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6BC07AF12A7E67A200EC410A /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07AA32A7E60AF00EC410A /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,11 +26,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6BC07AF02A7E66D500EC410A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6BC07AF12A7E67A200EC410A /* Service.framework in Embed Frameworks */,
+				6BC07AEF2A7E66D500EC410A /* Model.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6BC07A552A7E4F7600EC410A /* ViewModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07A582A7E4F7600EC410A /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
 		6BC07A5D2A7E4F7600EC410A /* ViewModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07A622A7E4F7600EC410A /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
+		6BC07AA02A7E5F9E00EC410A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		6BC07AA32A7E60AF00EC410A /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC07AA72A7E60C200EC410A /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC07AB52A7E622400EC410A /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC07ABC2A7E624F00EC410A /* View.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = View.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC07ABE2A7E625D00EC410A /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC07AEE2A7E66D500EC410A /* Model.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +80,7 @@
 				6BC07A572A7E4F7600EC410A /* ViewModel */,
 				6BC07A612A7E4F7600EC410A /* ViewModelTests */,
 				6BC07A562A7E4F7600EC410A /* Products */,
+				6BC07AA22A7E60AF00EC410A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				6BC07A582A7E4F7600EC410A /* ViewModel.h */,
+				6BC07AA02A7E5F9E00EC410A /* API.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -80,6 +108,18 @@
 				6BC07A622A7E4F7600EC410A /* ViewModelTests.swift */,
 			);
 			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		6BC07AA22A7E60AF00EC410A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BC07ABE2A7E625D00EC410A /* Model.framework */,
+				6BC07ABC2A7E624F00EC410A /* View.framework */,
+				6BC07AB52A7E622400EC410A /* Model.framework */,
+				6BC07AA72A7E60C200EC410A /* Model.framework */,
+				6BC07AA32A7E60AF00EC410A /* Service.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +144,7 @@
 				6BC07A512A7E4F7600EC410A /* Sources */,
 				6BC07A522A7E4F7600EC410A /* Frameworks */,
 				6BC07A532A7E4F7600EC410A /* Resources */,
+				6BC07AF02A7E66D500EC410A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,6 +185,7 @@
 				TargetAttributes = {
 					6BC07A542A7E4F7600EC410A = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 					6BC07A5C2A7E4F7600EC410A = {
 						CreatedOnToolsVersion = 15.0;
@@ -191,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC07AA12A7E5F9E00EC410A /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +384,7 @@
 		6BC07A682A7E4F7600EC410A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -362,15 +406,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = www.abhiraj.com.ViewModel;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		6BC07A692A7E4F7600EC410A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -392,15 +441,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = www.abhiraj.com.ViewModel;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		6BC07A6B2A7E4F7600EC410A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -416,6 +469,7 @@
 		6BC07A6C2A7E4F7600EC410A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

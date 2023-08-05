@@ -6,8 +6,19 @@
 //
 
 import SwiftUI
+import Service
+import ViewModel
 
 struct ContentView: View {
+    
+    init() {
+        let m = NetworkServiceImp()
+        let request = JsonApiObject<FeedResponse>(requestBuilder: APIRequest.getFeed)
+        Task {
+            let k = try await m.fetchUsing(request)
+            print(k)
+        }
+    }
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -22,3 +33,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
