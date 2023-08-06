@@ -25,6 +25,7 @@
 		6BC07B0F2A7F8BD400EC410A /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B0E2A7F8BD400EC410A /* ProfileCoordinator.swift */; };
 		6BC07B112A7F8BED00EC410A /* PostDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B102A7F8BED00EC410A /* PostDetailCoordinator.swift */; };
 		6BC07B132A7FC90100EC410A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B122A7FC90100EC410A /* Coordinator.swift */; };
+		6BC07B232A7FF15700EC410A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BC07B1A2A7FF15700EC410A /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		6BC07B0E2A7F8BD400EC410A /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		6BC07B102A7F8BED00EC410A /* PostDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCoordinator.swift; sourceTree = "<group>"; };
 		6BC07B122A7FC90100EC410A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		6BC07B1A2A7FF15700EC410A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				6BC07A9F2A7E5F0B00EC410A /* Info.plist */,
+				6BC07B1A2A7FF15700EC410A /* README.md */,
 				6BC07B122A7FC90100EC410A /* Coordinator.swift */,
 				6BC0797B2A7E4C7A00EC410A /* VideoViewerApp.swift */,
 				6BC07B0C2A7F8BBD00EC410A /* FeedListCoordinator.swift */,
@@ -465,6 +468,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC07B232A7FF15700EC410A /* README.md in Resources */,
 				6BC079832A7E4C7C00EC410A /* Preview Assets.xcassets in Resources */,
 				6BC079802A7E4C7C00EC410A /* Assets.xcassets in Resources */,
 			);
