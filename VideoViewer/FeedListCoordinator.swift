@@ -13,7 +13,7 @@ import View
 import SwiftUI
 import Observation
 
-class FeedListCoordinator {
+class FeedListCoordinator: Coordinator {
     @Bindable var viewModel: FeedListViewModel
     private let view: FeedView
     private var detailCoordinator:PostDetailCoordinator? = nil
@@ -24,15 +24,15 @@ class FeedListCoordinator {
         self.view = FeedView(viewModel: viewModel)
     }
     
-    func createView() -> some View {
-        self.view.sheet(item: $viewModel.selectedPostViewModel) {
+    func createView() -> AnyView {
+        AnyView(self.view.sheet(item: $viewModel.selectedPostViewModel) {
             [weak self] in
             self?.viewModel.selectedPostViewModel = nil
             self?.detailCoordinator = nil
         } content: { [weak self]  post in
             
              self?.getCoordinator(postId: post.id).createView()
-        }
+        })
         
     }
     

@@ -8,10 +8,12 @@
 import SwiftUI
 
 @main
+
 struct VideoViewerApp: App {
+    var coordinator: Coordinator = FeedListCoordinator()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            coordinator.createView()
         }
     }
 }

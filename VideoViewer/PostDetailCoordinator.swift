@@ -13,7 +13,7 @@ import View
 import SwiftUI
 import Observation
 
-class PostDetailCoordinator {
+class PostDetailCoordinator: Coordinator {
     @Bindable var viewModel: PostDetailViewModel
     private let view: PostDetailView
     private var profileCoordinator:ProfileCoordinator? = nil
@@ -25,16 +25,12 @@ class PostDetailCoordinator {
         self.view = PostDetailView(viewModel: viewModel)
     }
     
-    func createView() -> some View {
-        self.view.sheet(isPresented: $viewModel.selectedUser) {
+    func createView() -> AnyView {
+        AnyView(self.view.sheet(isPresented: $viewModel.selectedUser) {
             self.viewModel.selectedUser  = false
         } content: { [weak self] in
             self?.getCoordinator(user: self?.viewModel.post?.user ?? "").createView()
-        }
-    }
-    
-    func createEmptyView() -> some View {
-        EmptyView()
+        })
     }
     
     func getCoordinator(user: String) -> ProfileCoordinator {

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6BC0797C2A7E4C7A00EC410A /* VideoViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC0797B2A7E4C7A00EC410A /* VideoViewerApp.swift */; };
-		6BC0797E2A7E4C7A00EC410A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC0797D2A7E4C7A00EC410A /* ContentView.swift */; };
 		6BC079802A7E4C7C00EC410A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC0797F2A7E4C7C00EC410A /* Assets.xcassets */; };
 		6BC079832A7E4C7C00EC410A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC079822A7E4C7C00EC410A /* Preview Assets.xcassets */; };
 		6BC0798D2A7E4C7C00EC410A /* VideoViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC0798C2A7E4C7C00EC410A /* VideoViewerTests.swift */; };
@@ -25,6 +24,7 @@
 		6BC07B0D2A7F8BBD00EC410A /* FeedListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B0C2A7F8BBD00EC410A /* FeedListCoordinator.swift */; };
 		6BC07B0F2A7F8BD400EC410A /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B0E2A7F8BD400EC410A /* ProfileCoordinator.swift */; };
 		6BC07B112A7F8BED00EC410A /* PostDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B102A7F8BED00EC410A /* PostDetailCoordinator.swift */; };
+		6BC07B132A7FC90100EC410A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B122A7FC90100EC410A /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,7 +120,6 @@
 /* Begin PBXFileReference section */
 		6BC079782A7E4C7A00EC410A /* VideoViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC0797B2A7E4C7A00EC410A /* VideoViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewerApp.swift; sourceTree = "<group>"; };
-		6BC0797D2A7E4C7A00EC410A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6BC0797F2A7E4C7C00EC410A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BC079822A7E4C7C00EC410A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6BC079882A7E4C7C00EC410A /* VideoViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +135,7 @@
 		6BC07B0C2A7F8BBD00EC410A /* FeedListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListCoordinator.swift; sourceTree = "<group>"; };
 		6BC07B0E2A7F8BD400EC410A /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		6BC07B102A7F8BED00EC410A /* PostDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCoordinator.swift; sourceTree = "<group>"; };
+		6BC07B122A7FC90100EC410A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,8 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				6BC07A9F2A7E5F0B00EC410A /* Info.plist */,
+				6BC07B122A7FC90100EC410A /* Coordinator.swift */,
 				6BC0797B2A7E4C7A00EC410A /* VideoViewerApp.swift */,
-				6BC0797D2A7E4C7A00EC410A /* ContentView.swift */,
 				6BC07B0C2A7F8BBD00EC410A /* FeedListCoordinator.swift */,
 				6BC07B0E2A7F8BD400EC410A /* ProfileCoordinator.swift */,
 				6BC07B102A7F8BED00EC410A /* PostDetailCoordinator.swift */,
@@ -492,8 +492,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BC07B0F2A7F8BD400EC410A /* ProfileCoordinator.swift in Sources */,
-				6BC0797E2A7E4C7A00EC410A /* ContentView.swift in Sources */,
 				6BC0797C2A7E4C7A00EC410A /* VideoViewerApp.swift in Sources */,
+				6BC07B132A7FC90100EC410A /* Coordinator.swift in Sources */,
 				6BC07B112A7F8BED00EC410A /* PostDetailCoordinator.swift in Sources */,
 				6BC07B0D2A7F8BBD00EC410A /* FeedListCoordinator.swift in Sources */,
 			);
