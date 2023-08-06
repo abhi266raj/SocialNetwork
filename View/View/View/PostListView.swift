@@ -15,22 +15,23 @@ public struct PostListView: View {
     }
     
     let columns: [GridItem] = [
-        GridItem(.fixed(UIScreen.main.bounds.width / 2)),
-        GridItem(.fixed( UIScreen.main.bounds.width / 2))
+        GridItem(.fixed(UIScreen.main.bounds.width / 2 - 30), spacing: 20),
+        GridItem(.fixed( UIScreen.main.bounds.width / 2 - 30), spacing: 20)
        ]
     
     public var body: some View {
         ScrollView {
-                LazyVGrid(columns: columns, spacing: 20) {
+            LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
                     ForEach(viewModelList, id: \.id) { postViewModel in
                         PostView(viewModel: postViewModel)
                             .frame( height: 300).clipped()
+                            .cornerRadius(5)
                             .onTapGesture {
                                 postViewModel.postSelected()
                             }
                     }
                 }
-            }
+        }
     }
 }
 

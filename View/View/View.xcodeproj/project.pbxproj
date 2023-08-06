@@ -10,12 +10,13 @@
 		6BC07A332A7E4F4800EC410A /* View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07A2A2A7E4F4800EC410A /* View.framework */; };
 		6BC07A382A7E4F4800EC410A /* ViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07A372A7E4F4800EC410A /* ViewTests.swift */; };
 		6BC07A392A7E4F4800EC410A /* View.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC07A2D2A7E4F4800EC410A /* View.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BC07AF72A7EB74000EC410A /* FeedPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07AF62A7EB74000EC410A /* FeedPostView.swift */; };
+		6BC07AF72A7EB74000EC410A /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07AF62A7EB74000EC410A /* PostView.swift */; };
 		6BC07AF92A7EB75200EC410A /* ViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07AF82A7EB75200EC410A /* ViewModel.framework */; };
 		6BC07AFF2A7F49A700EC410A /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07AFE2A7F49A700EC410A /* PostDetailView.swift */; };
 		6BC07B072A7F741400EC410A /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B062A7F741400EC410A /* PostListView.swift */; };
 		6BC07B092A7F74F900EC410A /* UserProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B082A7F74F900EC410A /* UserProfileDetailView.swift */; };
 		6BC07B0B2A7F876C00EC410A /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B0A2A7F876C00EC410A /* FeedView.swift */; };
+		6BC07B152A7FDA8F00EC410A /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B142A7FDA8F00EC410A /* Themes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,12 +35,13 @@
 		6BC07A322A7E4F4800EC410A /* ViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07A372A7E4F4800EC410A /* ViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTests.swift; sourceTree = "<group>"; };
 		6BC07AD42A7E644B00EC410A /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BC07AF62A7EB74000EC410A /* FeedPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPostView.swift; sourceTree = "<group>"; };
+		6BC07AF62A7EB74000EC410A /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		6BC07AF82A7EB75200EC410A /* ViewModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ViewModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07AFE2A7F49A700EC410A /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 		6BC07B062A7F741400EC410A /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		6BC07B082A7F74F900EC410A /* UserProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDetailView.swift; sourceTree = "<group>"; };
 		6BC07B0A2A7F876C00EC410A /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		6BC07B142A7FDA8F00EC410A /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,11 +87,12 @@
 			isa = PBXGroup;
 			children = (
 				6BC07A2D2A7E4F4800EC410A /* View.h */,
-				6BC07AF62A7EB74000EC410A /* FeedPostView.swift */,
-				6BC07AFE2A7F49A700EC410A /* PostDetailView.swift */,
-				6BC07B062A7F741400EC410A /* PostListView.swift */,
-				6BC07B082A7F74F900EC410A /* UserProfileDetailView.swift */,
+				6BC07B142A7FDA8F00EC410A /* Themes.swift */,
 				6BC07B0A2A7F876C00EC410A /* FeedView.swift */,
+				6BC07B062A7F741400EC410A /* PostListView.swift */,
+				6BC07AF62A7EB74000EC410A /* PostView.swift */,
+				6BC07AFE2A7F49A700EC410A /* PostDetailView.swift */,
+				6BC07B082A7F74F900EC410A /* UserProfileDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -222,8 +225,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BC07B0B2A7F876C00EC410A /* FeedView.swift in Sources */,
+				6BC07B152A7FDA8F00EC410A /* Themes.swift in Sources */,
 				6BC07B092A7F74F900EC410A /* UserProfileDetailView.swift in Sources */,
-				6BC07AF72A7EB74000EC410A /* FeedPostView.swift in Sources */,
+				6BC07AF72A7EB74000EC410A /* PostView.swift in Sources */,
 				6BC07B072A7F741400EC410A /* PostListView.swift in Sources */,
 				6BC07AFF2A7F49A700EC410A /* PostDetailView.swift in Sources */,
 			);

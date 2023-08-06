@@ -17,11 +17,13 @@ public struct FeedView: View {
     }
     
     public var body: some View {
+        Group {
             if viewModel.isLoading {
                 ProgressView()
             }
             PostListView(viewModelList: viewModel.postList).refreshable {
                 await viewModel.pullToRefresh()
             }
+        }.background(Themes.background)
     }
 }

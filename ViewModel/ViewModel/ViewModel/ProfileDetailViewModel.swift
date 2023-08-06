@@ -12,11 +12,12 @@ import Service
 @Observable public class ProfileDetailViewModel {
     public var selectedViewModel: PostViewModel? = nil
     public var profile: UserProfileViewModel? = nil
-    private let networkService = NetworkServiceImp()
+    private let networkService: NetworkService
     private let userName: String
     
-    public init(userName: String) {
+    public init(userName: String, networkService: NetworkService = NetworkServiceImp()) {
         self.userName = userName
+        self.networkService = networkService
     }
     
     

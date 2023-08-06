@@ -10,14 +10,14 @@ import Model
 import Service
 
 @Observable public class FeedListViewModel {
-    let networkService = NetworkServiceImp()
+    let networkService: NetworkService
     public var isLoading = false
     public var selectedPostViewModel: PostViewModel? = nil
     
     public var postList:[PostViewModel] = []
     
-    public init() {
-        
+    public init(networkService: NetworkService = NetworkServiceImp()) {
+        self.networkService = networkService
     }
     
     public func fetchData() {

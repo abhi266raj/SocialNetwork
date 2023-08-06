@@ -20,13 +20,16 @@ public struct PostDetailView: View {
     
     
     public var body: some View {
-        if viewModel.post == nil {
-            ProgressView() // Show the loader when postViewModel is nil
-        } else {
-            if let postViewModel = viewModel.post {
-                PostVideoView(viewModel: postViewModel) // Show PostView with postViewModel
+        Group {
+            if viewModel.post == nil {
+                ProgressView() // Show the loader when postViewModel is nil
+            } else {
+                if let postViewModel = viewModel.post {
+                    PostVideoView(viewModel: postViewModel) // Show PostView with postViewModel
+                }
             }
-        }
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Themes.background)
     }
 }
 
@@ -43,7 +46,7 @@ public struct PostVideoView: View {
     }
     
     public var body: some View {
-        VStack {
+        VStack(alignment: .center) {
             Group {
                 if let player {
                     VideoPlayer(player: player)
@@ -59,11 +62,11 @@ public struct PostVideoView: View {
                     Color.red.opacity(0.2)
                 }
             }.padding()
-            Spacer().frame(height:20)
+            // Spacer().frame(height:20)
             Group {
-                VStack {
+                VStack (alignment: .leading) {
                     Spacer()
-                    HStack {
+                    HStack  {
                         Spacer().frame(width: 10)
                         Image(systemName: "person.fill") // Replace this with an
                         Text(viewModel.user)
@@ -82,12 +85,13 @@ public struct PostVideoView: View {
                     .padding([.top, .bottom], 4)
                     Spacer()
                 }
-            }.background(Color.gray)
-                .frame(height:50, alignment: .bottom).onTapGesture {
+            }
+            .frame(maxWidth: .infinity,minHeight:50, maxHeight: 50, alignment: .bottom).onTapGesture {
                     viewModel.profileTapped()
                     player?.pause()
                 }
         }
+        
     }
     
 }

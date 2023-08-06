@@ -12,11 +12,12 @@ import Service
 @Observable public class PostDetailViewModel {
     public var post: PostViewModel? = nil
     public var selectedUser:Bool = false
-    private let networkService = NetworkServiceImp()
+    private let networkService: NetworkService
     private let postId: String
     
-    public init(postId: String) {
+    public init(postId: String, networkService: NetworkService = NetworkServiceImp()) {
         self.postId = postId
+        self.networkService = networkService
     }
     
     

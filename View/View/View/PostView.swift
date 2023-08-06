@@ -1,5 +1,5 @@
 //
-//  FeedPostView.swift
+//  PostView.swift
 //  View
 //
 //  Created by Abhiraj on 05/08/23.
