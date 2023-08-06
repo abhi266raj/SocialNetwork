@@ -20,10 +20,13 @@ public struct FeedView: View {
         Group {
             if viewModel.isLoading {
                 ProgressView()
+            } else {
+                Text("Feed").font(.system(size: 30)) 
+                PostListView(viewModelList: viewModel.postList).refreshable {
+                    await viewModel.pullToRefresh()
+                }
             }
-            PostListView(viewModelList: viewModel.postList).refreshable {
-                await viewModel.pullToRefresh()
-            }
-        }.background(Themes.background)
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Themes.background)
     }
 }

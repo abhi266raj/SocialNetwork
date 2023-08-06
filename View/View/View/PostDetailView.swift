@@ -50,6 +50,7 @@ public struct PostVideoView: View {
             Group {
                 if let player {
                     VideoPlayer(player: player)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity )
                         .onAppear {
                             player.play()
                             isVideoPlaying = true
@@ -62,28 +63,33 @@ public struct PostVideoView: View {
                     Color.red.opacity(0.2)
                 }
             }.padding()
-            // Spacer().frame(height:20)
             Group {
-                VStack (alignment: .leading) {
-                    Spacer()
-                    HStack  {
-                        Spacer().frame(width: 10)
-                        Image(systemName: "person.fill") // Replace this with an
-                        Text(viewModel.user)
+                ZStack {
+                    Text("")
+                        .frame(maxWidth: .infinity, maxHeight: .infinity )
+                        .background(Themes.other)
+                    VStack (alignment: .leading) {
+                        Spacer()
+                        HStack  () {
+                            Spacer().frame(width: 10)
+                            Image(systemName: "person.fill") // Replace this with an
+                            Text(viewModel.user)
+                            Spacer()
+                        }
+                        .frame(alignment: .center)
+                        .padding([.top, .bottom], 4)
+                        
+                        HStack () {
+                            Spacer().frame(width: 10)
+                            Image(systemName: "heart.fill") // Replace this with an appropriate likes icon image
+                            Text("\(viewModel.likes)")
+                            Spacer()
+                        }
+                        .frame(alignment: .center)
+                        .padding([.top, .bottom], 4)
                         Spacer()
                     }
-                    .frame(alignment: .center)
-                    .padding([.top, .bottom], 4)
                     
-                    HStack {
-                        Spacer().frame(width: 10)
-                        Image(systemName: "heart.fill") // Replace this with an appropriate likes icon image
-                        Text("\(viewModel.likes)")
-                        Spacer()
-                    }
-                    .frame(alignment: .center)
-                    .padding([.top, .bottom], 4)
-                    Spacer()
                 }
             }
             .frame(maxWidth: .infinity,minHeight:50, maxHeight: 50, alignment: .bottom).onTapGesture {

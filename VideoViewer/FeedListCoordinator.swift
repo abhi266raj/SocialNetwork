@@ -11,7 +11,7 @@ import SwiftUI
 
 class FeedListCoordinator: Coordinator {
     @Bindable var viewModel: FeedListViewModel
-    private let view: FeedView
+    let view: FeedView
     private var detailCoordinator:PostDetailCoordinator? = nil
     
     init() {
@@ -42,6 +42,10 @@ class FeedListCoordinator: Coordinator {
         return coordinator
     }
 }
+
+
+
+
 
 
 
