@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+
+public struct PostDetailModel: Codable {
+    public let status: String
+    public let data: Post
+}

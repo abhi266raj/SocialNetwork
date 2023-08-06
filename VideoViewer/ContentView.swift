@@ -8,25 +8,34 @@
 import SwiftUI
 import Service
 import ViewModel
+import Model
+import View
 
 struct ContentView: View {
-    
+    var viewModel = FeedListViewModel()
     init() {
-        let m = NetworkServiceImp()
-        let request = JsonApiObject<FeedResponse>(requestBuilder: APIRequest.getFeed)
-        Task {
-            let k = try await m.fetchUsing(request)
-            print(k)
-        }
+        viewModel.fetchData()
     }
+    
+    let columns: [GridItem] = [
+        GridItem(.fixed(UIScreen.main.bounds.width / 2)),
+        GridItem(.fixed( UIScreen.main.bounds.width / 2))
+       ]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(viewModel.postList, id: \.id) { postViewModel in
+                    PostView(viewModel: postViewModel)
+                        .frame( height: 300).clipped()
+                        .onTapGesture {
+                            
+                           print("Tapped")
+                        }
+                }
+            }
+            .padding()
         }
-        .padding()
     }
 }
 

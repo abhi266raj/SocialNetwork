@@ -14,6 +14,8 @@
 		6BC07AEE2A7E66D500EC410A /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07ABE2A7E625D00EC410A /* Model.framework */; };
 		6BC07AEF2A7E66D500EC410A /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07ABE2A7E625D00EC410A /* Model.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6BC07AF12A7E67A200EC410A /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07AA32A7E60AF00EC410A /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6BC07AF52A7EAD8200EC410A /* FeedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07AF42A7EAD8200EC410A /* FeedListViewModel.swift */; };
+		6BC07AFB2A7F430400EC410A /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07AFA2A7F430400EC410A /* PostDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		6BC07AB52A7E622400EC410A /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07ABC2A7E624F00EC410A /* View.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = View.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07ABE2A7E625D00EC410A /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BC07AF42A7EAD8200EC410A /* FeedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewModel.swift; sourceTree = "<group>"; };
+		6BC07AFA2A7F430400EC410A /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			children = (
 				6BC07A582A7E4F7600EC410A /* ViewModel.h */,
 				6BC07AA02A7E5F9E00EC410A /* API.swift */,
+				6BC07AF42A7EAD8200EC410A /* FeedListViewModel.swift */,
+				6BC07AFA2A7F430400EC410A /* PostDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -233,6 +239,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC07AFB2A7F430400EC410A /* PostDetailViewModel.swift in Sources */,
+				6BC07AF52A7EAD8200EC410A /* FeedListViewModel.swift in Sources */,
 				6BC07AA12A7E5F9E00EC410A /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

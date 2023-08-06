@@ -41,10 +41,7 @@ public struct JsonApiObject<T:Decodable>: NetworkObject {
     }
 }
 
-public struct FeedResponse: Decodable {
-    public let status: String
-    // let data: [Video]
-}
+
 
 
 

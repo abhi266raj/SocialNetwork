@@ -24,25 +24,24 @@ import Model
 import Service
 
 
-@Observable public class PostViewModel {
-    let networkService = NetworkServiceImp()
+@Observable public class PostDetailViewModel {
+    private let networkService = NetworkServiceImp()
+    private let postId: String
     
-    public var postList:[PostViewModel] = []
-    
-    public init() {
-        
+    public init(postId: String) {
+        self.postId = postId
     }
     
+    public var post: Post? = nil
+    
+   
+    
     public func fetchData() {
-        let request = JsonApiObject<FeedResponse>(requestBuilder: APIRequest.getFeed)
+        let request = JsonApiObject<PostDetailModel>(requestBuilder: APIRequest.getPost(postID: postId))
         Task {
             do  {
                 let response = try await networkService.fetchUsing(request)
-                let postViewModelList = response.data.results.map { post in
-                    PostViewModel(post: post)
-                }
-                postList = postViewModelList
-                
+                self.post = response.data
             } catch let (error) {
                 print(error)
             }
@@ -54,32 +53,4 @@ import Service
 
 
 
-@Observable public class PostViewModel {
-    private let post: Post
-
-    init(post: Post) {
-        self.post = post
-    }
-
-    public var id: Int {
-        return post.id
-    }
-
-    public var videoURL: String {
-        return post.videoURL
-    }
-
-    public var likes: Int {
-        return post.likes
-    }
-
-    public var thumbnailURL: String {
-        return post.thumbnailURL
-    }
-
-    public var user: String {
-        return post.user
-    }
-
-}
 

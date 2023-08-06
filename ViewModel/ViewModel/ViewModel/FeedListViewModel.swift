@@ -11,14 +11,28 @@ import Model
 import Service
 
 
-@Observable class FeedListViewModel {
+@Observable public class FeedListViewModel {
+    let networkService = NetworkServiceImp()
+    
+    public var postList:[PostViewModel] = []
+    
+    public init() {
+        
+    }
     
     public func fetchData() {
-        let m = NetworkServiceImp()
         let request = JsonApiObject<FeedResponse>(requestBuilder: APIRequest.getFeed)
         Task {
-            let response = try await m.fetchUsing(request)
-            print (response)
+            do  {
+                let response = try await networkService.fetchUsing(request)
+                let postViewModelList = response.data.results.map { post in
+                    PostViewModel(post: post)
+                }
+                postList = postViewModelList
+                
+            } catch let (error) {
+                print(error)
+            }
         }
         
     }
@@ -27,30 +41,30 @@ import Service
 
 
 
-@Observable class PostViewModel {
+@Observable public class PostViewModel {
     private let post: Post
 
     init(post: Post) {
         self.post = post
     }
 
-    var id: Int {
+    public var id: Int {
         return post.id
     }
 
-    var videoURL: URL {
+    public var videoURL: String {
         return post.videoURL
     }
 
-    var likes: Int {
+    public var likes: Int {
         return post.likes
     }
 
-    var thumbnailURL: URL {
+    public var thumbnailURL: String {
         return post.thumbnailURL
     }
 
-    var user: String {
+    public var user: String {
         return post.user
     }
 

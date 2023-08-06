@@ -10,6 +10,8 @@
 		6BC07A082A7E4F1700EC410A /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC079FF2A7E4F1700EC410A /* Model.framework */; };
 		6BC07A0D2A7E4F1700EC410A /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07A0C2A7E4F1700EC410A /* ModelTests.swift */; };
 		6BC07A0E2A7E4F1700EC410A /* Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC07A022A7E4F1700EC410A /* Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BC07AF32A7E6A4000EC410A /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07AF22A7E6A4000EC410A /* FeedResponse.swift */; };
+		6BC07AFD2A7F43DF00EC410A /* PostDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07AFC2A7F43DF00EC410A /* PostDetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,8 @@
 		6BC07A022A7E4F1700EC410A /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		6BC07A072A7E4F1700EC410A /* ModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07A0C2A7E4F1700EC410A /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		6BC07AF22A7E6A4000EC410A /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
+		6BC07AFC2A7F43DF00EC410A /* PostDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				6BC07A022A7E4F1700EC410A /* Model.h */,
+				6BC07AF22A7E6A4000EC410A /* FeedResponse.swift */,
+				6BC07AFC2A7F43DF00EC410A /* PostDetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +150,7 @@
 				TargetAttributes = {
 					6BC079FE2A7E4F1700EC410A = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 					6BC07A062A7E4F1700EC410A = {
 						CreatedOnToolsVersion = 15.0;
@@ -191,6 +198,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC07AFD2A7F43DF00EC410A /* PostDetailModel.swift in Sources */,
+				6BC07AF32A7E6A4000EC410A /* FeedResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +350,7 @@
 		6BC07A122A7E4F1700EC410A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -366,6 +376,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -374,6 +385,7 @@
 		6BC07A132A7E4F1700EC410A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -407,6 +419,7 @@
 		6BC07A152A7E4F1700EC410A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -422,6 +435,7 @@
 		6BC07A162A7E4F1700EC410A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

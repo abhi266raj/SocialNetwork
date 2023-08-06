@@ -7,47 +7,77 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9A786003-FE49-4147-B1F8-25F9940B7FB7"
+            uuid = "BF146358-AA3C-48C6-8C39-43C091C41368"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VideoViewer/ContentView.swift"
+            filePath = "Service/Service/Service/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "init()"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "fetchUsing(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "9A786003-FE49-4147-B1F8-25F9940B7FB7 - d1ede629ceee071f"
+                  uuid = "BF146358-AA3C-48C6-8C39-43C091C41368 - 92fed694b89eea5d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "VideoViewer.ContentView.init() -&gt; VideoViewer.ContentView"
-                  moduleName = "VideoViewer"
+                  symbolName = "(3) suspend resume partial function for Service.NetworkServiceImp.fetchUsing&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Service.NetworkObject&gt;(&#x3c4;_0_0) async throws -&gt; &#x3c4;_0_0.ResponseObject.ModelObject"
+                  moduleName = "Service"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/abhiraj/Documents/code/SwiftPractise/VideoViewer/VideoViewer/ContentView.swift"
+                  urlString = "file:///Users/abhiraj/Documents/code/SwiftPractise/VideoViewer/Service/Service/Service/NetworkService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "352">
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "752">
                </Location>
                <Location
-                  uuid = "9A786003-FE49-4147-B1F8-25F9940B7FB7 - 7cea0a178983ed70"
+                  uuid = "BF146358-AA3C-48C6-8C39-43C091C41368 - 92fed694b89eea5d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in VideoViewer.ContentView.init() -&gt; VideoViewer.ContentView"
-                  moduleName = "VideoViewer"
+                  symbolName = "(3) suspend resume partial function for Service.NetworkServiceImp.fetchUsing&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Service.NetworkObject&gt;(&#x3c4;_0_0) async throws -&gt; &#x3c4;_0_0.ResponseObject.ModelObject"
+                  moduleName = "Service"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/abhiraj/Documents/code/SwiftPractise/VideoViewer/VideoViewer/ContentView.swift"
+                  urlString = "file:///Users/abhiraj/Documents/code/SwiftPractise/VideoViewer/Service/Service/Service/NetworkService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "132">
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "768">
+               </Location>
+               <Location
+                  uuid = "BF146358-AA3C-48C6-8C39-43C091C41368 - e6a7bf423d0b4c5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for Service.NetworkServiceImp.fetchUsing&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Service.NetworkObject&gt;(&#x3c4;_0_0) async throws -&gt; &#x3c4;_0_0.ResponseObject.ModelObject"
+                  moduleName = "Service"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhiraj/Documents/code/SwiftPractise/VideoViewer/Service/Service/Service/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "BF146358-AA3C-48C6-8C39-43C091C41368 - e6a7bf423d0b4c5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for Service.NetworkServiceImp.fetchUsing&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Service.NetworkObject&gt;(&#x3c4;_0_0) async throws -&gt; &#x3c4;_0_0.ResponseObject.ModelObject"
+                  moduleName = "Service"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abhiraj/Documents/code/SwiftPractise/VideoViewer/Service/Service/Service/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "192">
                </Location>
             </Locations>
          </BreakpointContent>

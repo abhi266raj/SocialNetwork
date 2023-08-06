@@ -8,21 +8,29 @@
 import Foundation
 
 
-struct FeedResponse: Codable {
-    let status: String
-    let data: PostList
+public struct FeedResponse: Codable {
+    public let status: String
+    public let data: PostList
 }
 
-struct PostList: Codable {
-    let count: Int
-    let results: [Post]
+public struct PostList: Codable {
+    public let count: Int
+    public let results: [Post]
 }
 
-struct Post: Codable {
-    let id: Int
-    let videoURL: URL
-    let likes: Int
-    let thumbnailURL: URL
-    let user: String
+public struct Post: Codable {
+    public let id: Int
+    public let videoURL: String
+    public let likes: Int
+    public let thumbnailURL: String
+    public let user: String
+    
+    private enum CodingKeys: String, CodingKey {
+            case id
+            case videoURL = "video_url"
+            case likes
+            case thumbnailURL = "thumbnail_url"
+            case user
+        }
 }
 
