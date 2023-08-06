@@ -7,7 +7,6 @@
 
 import SwiftUI
 import ViewModel
-import AVFoundation
 import _AVKit_SwiftUI
 
 public struct PostDetailView: View {

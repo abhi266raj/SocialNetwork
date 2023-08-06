@@ -5,24 +5,9 @@
 //  Created by Abhiraj on 06/08/23.
 //
 
-import Foundation
 import Observation
 import Model
 import Service
-
-
-//
-//  FeedViewModel.swift
-//  ViewModel
-//
-//  Created by Abhiraj on 05/08/23.
-//
-
-import Foundation
-import Observation
-import Model
-import Service
-
 
 @Observable public class PostDetailViewModel {
     public var post: PostViewModel? = nil

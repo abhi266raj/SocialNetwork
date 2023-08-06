@@ -5,11 +5,9 @@
 //  Created by Abhiraj on 06/08/23.
 //
 
-import Foundation
 import Observation
 import Model
 import Service
-
 
 @Observable public class ProfileDetailViewModel {
     public var selectedViewModel: PostViewModel? = nil

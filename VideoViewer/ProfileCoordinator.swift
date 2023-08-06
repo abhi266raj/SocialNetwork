@@ -5,14 +5,9 @@
 //  Created by Abhiraj on 06/08/23.
 //
 
-import Foundation
-import Service
 import ViewModel
-import Model
 import View
 import SwiftUI
-import Observation
-
 
 class ProfileCoordinator: Coordinator {
     @Bindable var viewModel: ProfileDetailViewModel

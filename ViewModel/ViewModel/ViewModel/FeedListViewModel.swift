@@ -5,12 +5,9 @@
 //  Created by Abhiraj on 05/08/23.
 //
 
-import Foundation
 import Observation
 import Model
 import Service
-
-
 
 @Observable public class FeedListViewModel {
     let networkService = NetworkServiceImp()
