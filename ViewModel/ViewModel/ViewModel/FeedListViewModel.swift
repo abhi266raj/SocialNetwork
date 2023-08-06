@@ -11,9 +11,11 @@ import Model
 import Service
 
 
+
 @Observable public class FeedListViewModel {
     let networkService = NetworkServiceImp()
     public var isLoading = false
+    public var selectedPostViewModel: PostViewModel? = nil
     
     public var postList:[PostViewModel] = []
     
@@ -28,7 +30,9 @@ import Service
             do  {
                 let response = try await networkService.fetchUsing(request)
                 let postViewModelList = response.data.results.map { post in
-                    PostViewModel(post: post)
+                    PostViewModel(post: post) { [weak self] item  in
+                        self?.selectedPostViewModel = item
+                    }
                 }
                 postList = postViewModelList
                 isLoading = false
@@ -37,6 +41,22 @@ import Service
                 isLoading = false
                 print(error)
             }
+        }
+    }
+    
+    public func pullToRefresh() async {
+        let request = JsonApiObject<FeedResponse>(requestBuilder: APIRequest.getFeed)
+        do  {
+            let response = try await networkService.fetchUsing(request)
+            let postViewModelList = response.data.results.map { post in
+                PostViewModel(post: post) { [weak self] item  in
+                    self?.selectedPostViewModel = item
+                }
+
+            }
+            postList = postViewModelList
+        } catch let (error) {
+            print(error)
         }
         
     }
@@ -47,9 +67,14 @@ import Service
 
 @Observable public class PostViewModel {
     private let post: Post
-
-    init(post: Post) {
+    
+    var onTap: ((PostViewModel) -> Void)? = nil
+    
+    var profileSelected: ((String) -> Void)? = nil
+    
+    init(post: Post, onTap:((PostViewModel) -> Void)? = nil ) {
         self.post = post
+        self.onTap = onTap
     }
 
     public var id: Int {
@@ -70,7 +95,16 @@ import Service
 
     public var user: String {
         return post.user
-    }    
+    }
+    
+    public func postSelected() {
+        onTap?(self)
+    }
+    
+    public func profileTapped() {
+        profileSelected?(user)
+    }
+    
 }
 
 extension PostViewModel : Identifiable {

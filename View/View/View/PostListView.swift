@@ -13,8 +13,6 @@ import AVFoundation
 
 public struct PostListView: View {
     let viewModelList: [PostViewModel]
-    @State private var isTapped = false
-    @State private var selectedViewModel: PostViewModel?
     public init(viewModelList: [PostViewModel]) {
         self.viewModelList = viewModelList
     }
@@ -31,17 +29,9 @@ public struct PostListView: View {
                         PostView(viewModel: postViewModel)
                             .frame( height: 300).clipped()
                             .onTapGesture {
-                                isTapped = true
-                                selectedViewModel = postViewModel
+                                postViewModel.postSelected()
                             }
                     }
-                    .sheet(item: $selectedViewModel, onDismiss: {
-                        selectedViewModel = nil
-                    }, content: { item in
-                        let postId = String(item.id)
-                        let vm = PostDetailViewModel(postId: postId)
-                        PostDetailView(viewModel: vm)
-                    })
                 }
             }
     }

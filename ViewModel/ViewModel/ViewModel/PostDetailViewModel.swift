@@ -26,6 +26,7 @@ import Service
 
 @Observable public class PostDetailViewModel {
     public var post: PostViewModel? = nil
+    public var selectedUser:Bool = false
     private let networkService = NetworkServiceImp()
     private let postId: String
     
@@ -41,6 +42,9 @@ import Service
             do  {
                 let response = try await networkService.fetchUsing(request)
                 let viewModel = PostViewModel(post: response.data)
+                viewModel.profileSelected = {[weak self] _ in
+                        self?.selectedUser = true
+                }
                 self.post = viewModel
             } catch let (error) {
                 print(error)

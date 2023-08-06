@@ -35,7 +35,6 @@ public struct PostDetailView: View {
 public struct PostVideoView: View {
     var viewModel: PostViewModel
     @State private var isVideoPlaying = false
-    @State private var isProfileClicked = false
     private var player: AVPlayer?
     
     public init(viewModel: PostViewModel) {
@@ -87,13 +86,9 @@ public struct PostVideoView: View {
                 }
             }.background(Color.gray)
                 .frame(height:50, alignment: .bottom).onTapGesture {
-                    isProfileClicked = true
+                    viewModel.profileTapped()
+                    player?.pause()
                 }
-                .sheet(isPresented: $isProfileClicked, onDismiss: {
-                    isProfileClicked = false
-                }, content: {
-                    UserProfileDetailView(viewModel: ProfileDetailViewModel(userName: viewModel.user))
-                })
         }
     }
     

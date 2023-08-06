@@ -25,8 +25,26 @@ public struct UserProfileDetailView: View {
         if viewModel.profile == nil {
             ProgressView()
         } else {
-            if let posts = viewModel.profile?.postList {
-                PostListView(viewModelList: posts)
+            if let profile = viewModel.profile {
+                HStack (alignment: .center) {
+                        AsyncImage(url: URL(string: profile.profilePic)) { image in
+                            image
+                                .resizable()
+                                .scaledToFit()
+                        } placeholder: {
+                            ProgressView()
+                        }.frame(width: 100, height: 100)
+                        
+                    VStack(alignment: .leading) {
+                            Text("\(profile.name)")
+                            Text("\(profile.userName)")
+                            Text("\(profile.email)")
+                        }
+                        
+                    //}
+                }.frame(height: 100)
+                
+                PostListView(viewModelList: profile.postList)
             }
         }
     }
