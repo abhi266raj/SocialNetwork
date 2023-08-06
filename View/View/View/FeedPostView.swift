@@ -42,8 +42,15 @@ public struct PostView: View {
                                 }
                             
                         case .empty:
-                            
-                            Color.black.opacity(0.2)
+                            HStack {
+                                Spacer()
+                                VStack {
+                                    Spacer()
+                                    ProgressView().frame(width:20, height:20, alignment: .center)
+                                    Spacer()
+                                }
+                                Spacer()
+                            }
                         @unknown default:
                             Color.gray.opacity(0.2)
                         }

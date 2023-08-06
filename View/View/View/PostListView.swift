@@ -1,22 +1,22 @@
 //
-//  ContentView.swift
-//  VideoViewer
+//  PostListView.swift
+//  View
 //
-//  Created by Abhiraj on 05/08/23.
+//  Created by Abhiraj on 06/08/23.
 //
 
+import Foundation
 import SwiftUI
-import Service
 import ViewModel
-import Model
-import View
+import AVFoundation
 
-struct ContentView: View {
-    var viewModel = FeedListViewModel()
+
+public struct PostListView: View {
+    let viewModelList: [PostViewModel]
     @State private var isTapped = false
     @State private var selectedViewModel: PostViewModel?
-    init() {
-        viewModel.fetchData()
+    public init(viewModelList: [PostViewModel]) {
+        self.viewModelList = viewModelList
     }
     
     let columns: [GridItem] = [
@@ -24,13 +24,10 @@ struct ContentView: View {
         GridItem(.fixed( UIScreen.main.bounds.width / 2))
        ]
     
-    var body: some View {
+    public var body: some View {
         ScrollView {
-            if viewModel.isLoading {
-                ProgressView()
-            }
                 LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(viewModel.postList, id: \.id) { postViewModel in
+                    ForEach(viewModelList, id: \.id) { postViewModel in
                         PostView(viewModel: postViewModel)
                             .frame( height: 300).clipped()
                             .onTapGesture {
@@ -45,16 +42,11 @@ struct ContentView: View {
                         let vm = PostDetailViewModel(postId: postId)
                         PostDetailView(viewModel: vm)
                     })
-                    
-                    
-                    
                 }
-                .padding()
             }
     }
 }
 
-#Preview {
-    ContentView()
-}
+
+
 

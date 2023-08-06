@@ -21,7 +21,7 @@ extension APIRequest: RequestBuilder {
         case .getFeed:
             url = URL(string: "http://interview.talkshopclub.com:3010/api/feed")!
         case .getPost(let postID):
-            url = URL(string: "http://interview.talkshopclub.com:3010/api/post/\(postID)")!
+            url = URL(string: "http://interview.talkshopclub.com:3010/api/posts/\(postID)")!
         case .getProfile(let username):
             url = URL(string: "http://interview.talkshopclub.com:3010/api/profile/\(username)")!
         }

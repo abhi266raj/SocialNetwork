@@ -13,6 +13,7 @@ import Service
 
 @Observable public class FeedListViewModel {
     let networkService = NetworkServiceImp()
+    public var isLoading = false
     
     public var postList:[PostViewModel] = []
     
@@ -23,14 +24,17 @@ import Service
     public func fetchData() {
         let request = JsonApiObject<FeedResponse>(requestBuilder: APIRequest.getFeed)
         Task {
+            isLoading = true
             do  {
                 let response = try await networkService.fetchUsing(request)
                 let postViewModelList = response.data.results.map { post in
                     PostViewModel(post: post)
                 }
                 postList = postViewModelList
+                isLoading = false
                 
             } catch let (error) {
+                isLoading = false
                 print(error)
             }
         }
@@ -66,7 +70,10 @@ import Service
 
     public var user: String {
         return post.user
-    }
+    }    
+}
 
+extension PostViewModel : Identifiable {
+    
 }
 
