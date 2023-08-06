@@ -30,7 +30,8 @@ class FeedListCoordinator {
             self?.viewModel.selectedPostViewModel = nil
             self?.detailCoordinator = nil
         } content: { [weak self]  post in
-            self?.getCoordinator(postId: post.id).createView()
+            
+             self?.getCoordinator(postId: post.id).createView()
         }
         
     }

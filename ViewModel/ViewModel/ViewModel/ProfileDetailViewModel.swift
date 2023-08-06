@@ -12,7 +12,7 @@ import Service
 
 
 @Observable public class ProfileDetailViewModel {
-    public var selectedPostViewModel: PostViewModel? = nil
+    public var selectedViewModel: PostViewModel? = nil
     public var profile: UserProfileViewModel? = nil
     private let networkService = NetworkServiceImp()
     private let userName: String
@@ -30,9 +30,9 @@ import Service
                 self.profile = UserProfileViewModel(userProfile: response.data)
                 for item in self.profile?.postList ?? [] {
                     item.onTap = { [weak self] item  in
-                        self?.selectedPostViewModel = item
+                        self?.selectedViewModel = item
                     }
-                }
+               }
             } catch let (error) {
                 print(error)
             }

@@ -26,14 +26,13 @@ class ProfileCoordinator {
     }
     
     func createView() -> some View {
-        return self.view
-//        self.view.sheet(item: $viewModel.selectedPostViewModel) {
-//            [weak self] in
-//            self?.viewModel.selectedPostViewModel = nil
-//            self?.detailCoordinator = nil
-//        } content: { [weak self]  post in
-//            self?.getCoordinator(postId: post.id).createView()
-//        }
+        self.view.sheet(item: $viewModel.selectedViewModel) {
+            [weak self] in
+            self?.viewModel.selectedViewModel = nil
+            self?.detailCoordinator = nil
+        } content: { [weak self]  post in
+            self?.getCoordinator(postId: post.id).createEmptyView()
+        }
     }
     
     func getCoordinator(postId: Int) -> PostDetailCoordinator {

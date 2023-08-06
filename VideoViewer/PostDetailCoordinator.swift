@@ -16,6 +16,7 @@ import Observation
 class PostDetailCoordinator {
     @Bindable var viewModel: PostDetailViewModel
     private let view: PostDetailView
+    private var profileCoordinator:ProfileCoordinator? = nil
     
     init(_ postId: Int) {
         let post = String(postId)
@@ -27,9 +28,23 @@ class PostDetailCoordinator {
     func createView() -> some View {
         self.view.sheet(isPresented: $viewModel.selectedUser) {
             self.viewModel.selectedUser  = false
-        } content: {
-            ProfileCoordinator(self.viewModel.post?.user ?? "").createView()
+        } content: { [weak self] in
+            self?.getCoordinator(user: self?.viewModel.post?.user ?? "").createView()
         }
+    }
+    
+    func createEmptyView() -> some View {
+        EmptyView()
+    }
+    
+    func getCoordinator(user: String) -> ProfileCoordinator {
+        if let coordinator =  profileCoordinator {
+            return coordinator
+        }
+        
+        let coordinator  = ProfileCoordinator(user)
+        profileCoordinator = coordinator
+        return coordinator
     }
 }
 
