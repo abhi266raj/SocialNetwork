@@ -28,7 +28,7 @@ struct VideoPlayerView: View {
     
     var body: some View {
         ZStack {
-                CachedAsyncImage(url: imageUrl) { phase in
+            CachedAsyncImage(url: imageUrl, urlCache: .imageCache) { phase in
                     switch phase {
                     case .success(let image):
                         image

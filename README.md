@@ -29,6 +29,12 @@
 ## Perfomance
 - Image Cached via CachedAsyncImage 
 - Video perfomance via - Showing image thumb while video is loading to improve feel
+- Video not cahced but only image. 
+- Network response not cached as they change.
+
+
+## Unfixed things
+- Gitignore is not setup
 
 
 

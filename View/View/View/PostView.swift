@@ -24,7 +24,7 @@ public struct PostView: View {
                
                 // Load thumbnail image from thumbnailURL
                 GeometryReader { geometry in
-                    CachedAsyncImage(url: URL(string: viewModel.thumbnailURL)) { phase in
+                    CachedAsyncImage(url: URL(string: viewModel.thumbnailURL), urlCache: .imageCache) { phase in
                         switch phase {
                         case .success(let image):
                             image
