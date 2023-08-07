@@ -9,34 +9,32 @@ import Observation
 import Model
 import Service
 
-@Observable public class FeedListViewModel {
+@Observable public class FeedListViewModel: ApiCallLodable {
     let networkService: NetworkService
     public var isLoading = false
     public var selectedPostViewModel: PostViewModel? = nil
+    public let firstApiViewModel: APIResultViewModel = APIResultViewModel()
     
     public var postList:[PostViewModel] = []
     
     public init(networkService: NetworkService = NetworkServiceImp()) {
         self.networkService = networkService
+        firstApiViewModel.fetchData = { [weak self] in
+            self?.fetchData()
+        }
     }
     
     public func fetchData() {
         let request = JsonApiObject<FeedResponse>(requestBuilder: APIRequest.getFeed)
         Task {
-            isLoading = true
-            do  {
-                let response = try await networkService.fetchUsing(request)
+            if let response = try? await firstApiViewModel.getResult(apiObject: request, networkService: networkService) {
                 let postViewModelList = response.data.results.map { post in
                     PostViewModel(post: post) { [weak self] item  in
                         self?.selectedPostViewModel = item
                     }
                 }
                 postList = postViewModelList
-                isLoading = false
                 
-            } catch let (error) {
-                isLoading = false
-                print(error)
             }
         }
     }

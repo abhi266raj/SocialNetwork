@@ -32,9 +32,15 @@
 - Video not cahced but only image. 
 - Network response not cached as they change.
 
+## Error Case handling
+- Error in network call and retry are handled via FirstApiView and ApiCallLodable protocol and APIResultViewModel
+- FirstApiView manages state like loading, error and retry and view for same
+- APIResultViewModel maintian error, state of network call etc
+- ApiCallLodable protocol declares that api call will be made.
 
 ## Unfixed things
 - Gitignore is not setup
+- Naming correctness
 
 
 

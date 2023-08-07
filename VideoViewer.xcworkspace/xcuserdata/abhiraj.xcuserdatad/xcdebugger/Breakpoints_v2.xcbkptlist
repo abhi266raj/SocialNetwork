@@ -7,69 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "04DF3554-0511-43FE-8136-4C06CA0C1933"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ViewModel/ViewModel/ViewModel/FeedListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "fetchData()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "04DF3554-0511-43FE-8136-4C06CA0C1933 - e8ca57b1d2aec863"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in ViewModel.FeedListViewModel.fetchData() -&gt; ()"
-                  moduleName = "ViewModel"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/abhiraj/Documents/code/SwiftPractise/VideoViewer/ViewModel/ViewModel/ViewModel/FeedListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "356">
-               </Location>
-               <Location
-                  uuid = "04DF3554-0511-43FE-8136-4C06CA0C1933 - 39bc238791bbaa62"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in ViewModel.FeedListViewModel.fetchData() -&gt; ()"
-                  moduleName = "ViewModel"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/abhiraj/Documents/code/SwiftPractise/VideoViewer/ViewModel/ViewModel/ViewModel/FeedListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "132">
-               </Location>
-               <Location
-                  uuid = "04DF3554-0511-43FE-8136-4C06CA0C1933 - 39bc238791bbaa62"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in ViewModel.FeedListViewModel.fetchData() -&gt; ()"
-                  moduleName = "ViewModel"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/abhiraj/Documents/code/SwiftPractise/VideoViewer/ViewModel/ViewModel/ViewModel/FeedListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "120">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0FBDFC86-06E6-462A-A323-30C5D8F6187E"
             shouldBeEnabled = "No"
             ignoreCount = "0"

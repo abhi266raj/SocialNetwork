@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B7243AC2A8129E60034BC6B /* APIResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7243AB2A8129E60034BC6B /* APIResultViewModel.swift */; };
 		6BC07A5E2A7E4F7600EC410A /* ViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07A552A7E4F7600EC410A /* ViewModel.framework */; };
 		6BC07A632A7E4F7600EC410A /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07A622A7E4F7600EC410A /* ViewModelTests.swift */; };
 		6BC07A642A7E4F7600EC410A /* ViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC07A582A7E4F7600EC410A /* ViewModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,6 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6B7243AB2A8129E60034BC6B /* APIResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResultViewModel.swift; sourceTree = "<group>"; };
 		6BC07A552A7E4F7600EC410A /* ViewModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07A582A7E4F7600EC410A /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
 		6BC07A5D2A7E4F7600EC410A /* ViewModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,7 @@
 			children = (
 				6BC07A582A7E4F7600EC410A /* ViewModel.h */,
 				6BC07AA02A7E5F9E00EC410A /* API.swift */,
+				6B7243AB2A8129E60034BC6B /* APIResultViewModel.swift */,
 				6BC07AF42A7EAD8200EC410A /* FeedListViewModel.swift */,
 				6BC07AFA2A7F430400EC410A /* PostDetailViewModel.swift */,
 				6BC07B002A7F6CB600EC410A /* ProfileDetailViewModel.swift */,
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B7243AC2A8129E60034BC6B /* APIResultViewModel.swift in Sources */,
 				6BC07AFB2A7F430400EC410A /* PostDetailViewModel.swift in Sources */,
 				6BC07AF52A7EAD8200EC410A /* FeedListViewModel.swift in Sources */,
 				6BC07AA12A7E5F9E00EC410A /* API.swift in Sources */,

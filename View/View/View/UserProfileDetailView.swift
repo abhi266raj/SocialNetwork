@@ -16,37 +16,32 @@ public struct UserProfileDetailView: View {
         viewModel.fetchData()
     }
     
-    
-    
     public var body: some View {
-        Group {
-            if viewModel.profile == nil {
-                        ProgressView()
-            } else {
-                if let profile = viewModel.profile {
-                    VStack (alignment: .center) {
-                        HStack (alignment: .center, spacing: 30) {
-                            AsyncImage(url: URL(string: profile.profilePic)) { image in
-                                image
-                                    .resizable()
-                                    .scaledToFit()
-                            } placeholder: {
-                                ProgressView()
-                            }.frame(width: 100, height: 100)
-                            
-                            VStack(alignment: .leading) {
-                                Text("\(profile.name)")
-                                Text("\(profile.userName)")
-                                Text("\(profile.email)")
-                            }
-                            
-                            //}
-                        }.frame(maxWidth: .infinity,minHeight: 100, maxHeight: 100)
-                            .background(Themes.darkBackground)
-                        PostListView(viewModelList: profile.postList)
-                    }
+        FirstApiView(viewModel: viewModel) {
+            if let profile = viewModel.profile {
+                VStack (alignment: .center) {
+                    HStack (alignment: .center, spacing: 30) {
+                        AsyncImage(url: URL(string: profile.profilePic)) { image in
+                            image
+                                .resizable()
+                                .scaledToFit()
+                        } placeholder: {
+                            ProgressView()
+                        }.frame(width: 100, height: 100)
+                        
+                        VStack(alignment: .leading) {
+                            Text("\(profile.name)")
+                            Text("\(profile.userName)")
+                            Text("\(profile.email)")
+                        }
+                        
+                        //}
+                    }.frame(maxWidth: .infinity,minHeight: 100, maxHeight: 100)
+                        .background(Themes.darkBackground)
+                    PostListView(viewModelList: profile.postList)
                 }
             }
+            
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Themes.background)
     }

@@ -14,20 +14,15 @@ public struct PostDetailView: View {
     
     public init(viewModel: PostDetailViewModel) {
         self.viewModel = viewModel
-        viewModel.fetchData()
     }
     
     
     
     public var body: some View {
-        Group {
-            if viewModel.post == nil {
-                ProgressView() // Show the loader when postViewModel is nil
-            } else {
+        FirstApiView(viewModel: viewModel) {
                 if let postViewModel = viewModel.post {
                     PostVideoView(viewModel: postViewModel) // Show PostView with postViewModel
                 }
-            }
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Themes.background)
     }

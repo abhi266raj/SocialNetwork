@@ -13,19 +13,15 @@ public struct FeedView: View {
     
     public init(viewModel: FeedListViewModel) {
         self.viewModel = viewModel
-         viewModel.fetchData()
     }
     
     public var body: some View {
-        Group {
-            if viewModel.isLoading {
-                ProgressView()
-            } else {
-                Text("Feed").font(.system(size: 30)) 
-                PostListView(viewModelList: viewModel.postList).refreshable {
-                    await viewModel.pullToRefresh()
-                }
+        FirstApiView(viewModel: viewModel) {
+            Text("Feed").font(.system(size: 30))
+            PostListView(viewModelList: viewModel.postList).refreshable {
+                await viewModel.pullToRefresh()
             }
+            
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Themes.background)
     }

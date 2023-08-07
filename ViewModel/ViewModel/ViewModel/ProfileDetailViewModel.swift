@@ -9,31 +9,32 @@ import Observation
 import Model
 import Service
 
-@Observable public class ProfileDetailViewModel {
+@Observable public class ProfileDetailViewModel: ApiCallLodable {
     public var selectedViewModel: PostViewModel? = nil
     public var profile: UserProfileViewModel? = nil
     private let networkService: NetworkService
     private let userName: String
+    public let firstApiViewModel: APIResultViewModel = APIResultViewModel()
     
     public init(userName: String, networkService: NetworkService = NetworkServiceImp()) {
         self.userName = userName
         self.networkService = networkService
+        firstApiViewModel.fetchData = { [weak self] in
+            self?.fetchData()
+        }
     }
     
     
     public func fetchData() {
         let request = JsonApiObject<ProfileDetailModel>(requestBuilder: APIRequest.getProfile(username: userName))
         Task {
-            do  {
-                let response = try await networkService.fetchUsing(request)
+            if let response = try? await firstApiViewModel.getResult(apiObject: request, networkService: networkService)  {
                 self.profile = UserProfileViewModel(userProfile: response.data)
                 for item in self.profile?.postList ?? [] {
                     item.onTap = { [weak self] item  in
                         self?.selectedViewModel = item
                     }
                }
-            } catch let (error) {
-                print(error)
             }
         }
         

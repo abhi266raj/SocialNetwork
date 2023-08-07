@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B3712282A81055700987BB0 /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3712272A81055700987BB0 /* CacheImage.swift */; };
+		6B7243AE2A8138060034BC6B /* FirstApiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7243AD2A8138060034BC6B /* FirstApiView.swift */; };
 		6BC07A332A7E4F4800EC410A /* View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07A2A2A7E4F4800EC410A /* View.framework */; };
 		6BC07A382A7E4F4800EC410A /* ViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07A372A7E4F4800EC410A /* ViewTests.swift */; };
 		6BC07A392A7E4F4800EC410A /* View.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC07A2D2A7E4F4800EC410A /* View.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		6B3712272A81055700987BB0 /* CacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
+		6B7243AD2A8138060034BC6B /* FirstApiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstApiView.swift; sourceTree = "<group>"; };
 		6BC07A2A2A7E4F4800EC410A /* View.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = View.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07A2D2A7E4F4800EC410A /* View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		6BC07A322A7E4F4800EC410A /* ViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 			children = (
 				6BC07A2D2A7E4F4800EC410A /* View.h */,
 				6BC07B142A7FDA8F00EC410A /* Themes.swift */,
+				6B7243AD2A8138060034BC6B /* FirstApiView.swift */,
 				6BC07B0A2A7F876C00EC410A /* FeedView.swift */,
 				6BC07B062A7F741400EC410A /* PostListView.swift */,
 				6BC07AF62A7EB74000EC410A /* PostView.swift */,
@@ -237,6 +240,7 @@
 				6BC07AF72A7EB74000EC410A /* PostView.swift in Sources */,
 				6BC07B072A7F741400EC410A /* PostListView.swift in Sources */,
 				6BC07AFF2A7F49A700EC410A /* PostDetailView.swift in Sources */,
+				6B7243AE2A8138060034BC6B /* FirstApiView.swift in Sources */,
 				6BC07B252A80974D00EC410A /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
