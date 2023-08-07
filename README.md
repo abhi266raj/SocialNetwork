@@ -1,4 +1,4 @@
-# App
+# Social Network
 
 ## Requirement
  Xcode 15.0 beta or later
