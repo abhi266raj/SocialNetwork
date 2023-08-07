@@ -7,7 +7,7 @@
 
 import SwiftUI
 import ViewModel
-import _AVKit_SwiftUI
+import AVKit
 
 public struct PostDetailView: View {
     var viewModel: PostDetailViewModel
@@ -47,10 +47,11 @@ public struct PostVideoView: View {
     
     public var body: some View {
         VStack(alignment: .center) {
-            Group {
+            ZStack(alignment: .bottomTrailing) {
                 if let imageUrl = URL(string: viewModel.thumbnailURL), let player = player {
                     VideoPlayerView(imageUrl: imageUrl, player: player)
                 }
+                LikeButtonView().frame(width: 50, height: 50).padding(20)
             }.padding()
             Group {
                 ZStack {
@@ -90,6 +91,34 @@ public struct PostVideoView: View {
     }
     
 }
+
+
+private struct LikeButtonView: View {
+    @State private var isLiked = false
+    @State private var animate = false
+    
+    var body: some View {
+        Button(action: {
+            withAnimation {
+                self.isLiked.toggle()
+                self.animate.toggle()
+            }
+        }) {
+            Image(systemName: isLiked ? "heart.fill" : "heart")
+                .resizable()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .aspectRatio(contentMode: .fit)
+                .foregroundColor(isLiked ? .red : .gray)
+                .scaleEffect(animate ? 1.05 : 1.0)
+                
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}
+
+
+
+
 
 
 
