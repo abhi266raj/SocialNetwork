@@ -38,9 +38,20 @@
 - APIResultViewModel maintian error, state of network call etc
 - ApiCallLodable protocol declares that api call will be made.
 
+## Themes
+- Theme struct for changing color
+
+## To do
+- Use di for themes and networking
+
 ## Unfixed things
 - Gitignore is not setup
 - Naming correctness
+- MeaningFul commit message and proper git workflow
+- Linting
+- UITesting
+- Unit Testing
+- Visual Diff Testing
 
 
 
