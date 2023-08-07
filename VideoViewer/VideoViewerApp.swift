@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 
-struct VideoViewerApp: App {
+private struct VideoViewerApp: App {
     var coordinator: Coordinator = FeedListCoordinator()
     var body: some Scene {
         WindowGroup {

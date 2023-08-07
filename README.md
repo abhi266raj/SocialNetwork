@@ -26,4 +26,9 @@
 - View are swiftUI view
 - Binding is via observable
 
+## Perfomance
+- Image Cached via CachedAsyncImage 
+- Video perfomance via - Showing image thumb while video is loading to improve feel
+
+
 

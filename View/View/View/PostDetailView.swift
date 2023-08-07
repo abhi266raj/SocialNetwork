@@ -48,19 +48,8 @@ public struct PostVideoView: View {
     public var body: some View {
         VStack(alignment: .center) {
             Group {
-                if let player {
-                    VideoPlayer(player: player)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity )
-                        .onAppear {
-                            player.play()
-                            isVideoPlaying = true
-                        }
-                        .onDisappear {
-                            player.pause()
-                            isVideoPlaying = false
-                        }
-                } else {
-                    Color.red.opacity(0.2)
+                if let imageUrl = URL(string: viewModel.thumbnailURL), let player = player {
+                    VideoPlayerView(imageUrl: imageUrl, player: player)
                 }
             }.padding()
             Group {
