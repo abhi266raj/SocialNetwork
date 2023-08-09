@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ViewModel
+import Service
 
 public struct FeedView: View {
     public let viewModel:FeedListViewModel
@@ -17,12 +18,23 @@ public struct FeedView: View {
     
     public var body: some View {
         FirstApiView(viewModel: viewModel) {
-            Text("Feed").font(.system(size: 30))
-            PostListView(viewModelList: viewModel.postList).refreshable {
-                await viewModel.pullToRefresh()
+            VStack {
+                Text("Feed").font(.system(size: 30))
+                PostListView(viewModelList: viewModel.postList).refreshable {
+                    await viewModel.pullToRefresh()
+                }
             }
             
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Themes.background)
     }
+}
+
+#Preview {
+    {
+        VStack {
+            FeedView(viewModel: FeedListViewModel(networkService: MockNetworkService()))
+        }
+        
+    }()
 }

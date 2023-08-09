@@ -16,7 +16,7 @@ import Service
     private let postId: String
     public let firstApiViewModel: APIResultViewModel = APIResultViewModel()
     
-    public init(postId: String, networkService: NetworkService = NetworkServiceImp()) {
+    public init(postId: String, networkService: NetworkService) {
         self.postId = postId
         self.networkService = networkService
         firstApiViewModel.fetchData = { [weak self] in

@@ -15,7 +15,7 @@ public protocol ApiCallLodable {
 
 @Observable public class APIResultViewModel {
     
-    public var state = ApiState.initial
+    @MainActor public var state = ApiState.initial
     
     var fetchData:(()->Void) = {}
     
@@ -26,16 +26,16 @@ public protocol ApiCallLodable {
         case error(String)
     }
     
-    public func fetchDataIfNeeded() {
+    @MainActor public func fetchDataIfNeeded() {
         switch state {
-            case .initial, .error:
+        case .initial, .error:
                 self.fetchData()
             default:
                 break
         }
     }
 
-    func getResult<T>(apiObject: JsonApiObject<T>, networkService: NetworkService) async throws -> T {
+    @MainActor func getResult<T>(apiObject: JsonApiObject<T>, networkService: NetworkService) async throws -> T {
         state = .loading
         do  {
             let response = try await networkService.fetchUsing(apiObject)
@@ -44,7 +44,9 @@ public protocol ApiCallLodable {
             }
             return response
         }catch let (error) {
+            print(error.localizedDescription)
             state = .error(error.localizedDescription)
+            print(error.localizedDescription.description)
             throw error
         }
     }

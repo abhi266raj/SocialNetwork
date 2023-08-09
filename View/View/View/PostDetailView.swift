@@ -110,3 +110,17 @@ private struct LikeButtonView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
+
+
+#Preview {
+    VStack {
+        PostDetailView(viewModel: PostDetailViewModel(postId: "1", networkService: MockNetworkService().profileApi()))
+    }
+}
+
+#Preview("Error") {
+    VStack {
+        PostDetailView(viewModel: PostDetailViewModel(postId: "1", networkService: MockNetworkService()))
+    }
+}
+

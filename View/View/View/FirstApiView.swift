@@ -15,8 +15,8 @@ public struct FirstApiView <Content>: View where Content: View {
     var viewModel: APIResultViewModel
     
     init(viewModel: ApiCallLodable, @ViewBuilder successView: () -> Content ) {
-        self.successView = successView()
         self.viewModel = viewModel.firstApiViewModel
+        self.successView = successView()
     }
     
     public var body: some View {
@@ -29,7 +29,9 @@ public struct FirstApiView <Content>: View where Content: View {
             case .loading:
                 ProgressView()
             case .success:
-                successView
+                VStack {
+                    successView
+                }
             case .error(let value):
                 ZStack {
                     Color.red.opacity(0.4)

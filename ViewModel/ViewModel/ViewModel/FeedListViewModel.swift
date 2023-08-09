@@ -17,7 +17,7 @@ import Service
     
     public var postList:[PostViewModel] = []
     
-    public init(networkService: NetworkService = NetworkServiceImp()) {
+    public init(networkService: NetworkService) {
         self.networkService = networkService
         firstApiViewModel.fetchData = { [weak self] in
             self?.fetchData()
