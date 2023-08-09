@@ -7,6 +7,8 @@
 
 import XCTest
 @testable import View
+import ViewModel
+import SwiftUI
 
 final class ViewTests: XCTestCase {
 
@@ -34,3 +36,4 @@ final class ViewTests: XCTestCase {
     }
 
 }
+

@@ -33,7 +33,6 @@ class ProfileCoordinator: AppCoordinator<ProfileContentFactory> {
     private var detailCoordinator:PostDetailCoordinator? = nil
     
     convenience init(_ userName: String, appDependecy: AppDependency) {
-        let viewModel = ProfileDetailViewModel(userName: userName)
         let factory = ProfileContentFactory(appDependecy: appDependecy, userName: userName)
         self.init(contentBuilder: factory)
     }

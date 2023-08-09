@@ -58,8 +58,6 @@ import Service
 }
 
 
-
-
 @Observable public class PostViewModel {
     private let post: Post
     

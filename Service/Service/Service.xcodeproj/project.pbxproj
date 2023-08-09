@@ -42,11 +42,6 @@
 		6BC079DC2A7E4E9A00EC410A /* ServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC079E12A7E4E9A00EC410A /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
 		6BC07A9D2A7E513000EC410A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		6BC07AC12A7E62D800EC410A /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BC07AC32A7E632800EC410A /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BC07ACA2A7E636600EC410A /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BC07AD82A7E648100EC410A /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BC07AE02A7E65A100EC410A /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +102,6 @@
 		6BC07AC02A7E62D800EC410A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6BC07AE02A7E65A100EC410A /* Model.framework */,
-				6BC07AD82A7E648100EC410A /* Model.framework */,
-				6BC07ACA2A7E636600EC410A /* Model.framework */,
-				6BC07AC32A7E632800EC410A /* Model.framework */,
-				6BC07AC12A7E62D800EC410A /* Model.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
