@@ -14,14 +14,6 @@
 		6BC0798D2A7E4C7C00EC410A /* VideoViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC0798C2A7E4C7C00EC410A /* VideoViewerTests.swift */; };
 		6BC079972A7E4C7C00EC410A /* VideoViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC079962A7E4C7C00EC410A /* VideoViewerUITests.swift */; };
 		6BC079992A7E4C7C00EC410A /* VideoViewerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC079982A7E4C7C00EC410A /* VideoViewerUITestsLaunchTests.swift */; };
-		6BC07AAC2A7E60FA00EC410A /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07A9A2A7E511A00EC410A /* Model.framework */; };
-		6BC07AAF2A7E60FD00EC410A /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07A8E2A7E511A00EC410A /* Service.framework */; };
-		6BC07AB12A7E610200EC410A /* View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07A7C2A7E4FAA00EC410A /* View.framework */; };
-		6BC07AB32A7E610600EC410A /* ViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07A842A7E4FBA00EC410A /* ViewModel.framework */; };
-		6BC07AE42A7E65AF00EC410A /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07A8E2A7E511A00EC410A /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6BC07AEB2A7E65B700EC410A /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07A9A2A7E511A00EC410A /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6BC07AEC2A7E65BA00EC410A /* ViewModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07A842A7E4FBA00EC410A /* ViewModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6BC07AED2A7E65BF00EC410A /* View.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07A7C2A7E4FAA00EC410A /* View.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6BC07B0D2A7F8BBD00EC410A /* FeedListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B0C2A7F8BBD00EC410A /* FeedListCoordinator.swift */; };
 		6BC07B0F2A7F8BD400EC410A /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B0E2A7F8BD400EC410A /* ProfileCoordinator.swift */; };
 		6BC07B112A7F8BED00EC410A /* PostDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B102A7F8BED00EC410A /* PostDetailCoordinator.swift */; };
@@ -30,6 +22,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6B7244352A83BF5E0034BC6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BC07A422A7E4F4800EC410A /* View.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BC07A2A2A7E4F4800EC410A;
+			remoteInfo = View;
+		};
+		6B7244372A83BF5E0034BC6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BC07A422A7E4F4800EC410A /* View.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BC07A322A7E4F4800EC410A;
+			remoteInfo = ViewTests;
+		};
 		6BC079892A7E4C7C00EC410A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6BC079702A7E4C7A00EC410A /* Project object */;
@@ -44,62 +50,6 @@
 			remoteGlobalIDString = 6BC079772A7E4C7A00EC410A;
 			remoteInfo = VideoViewer;
 		};
-		6BC07A7B2A7E4FAA00EC410A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6BC07A422A7E4F4800EC410A /* View.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6BC07A2A2A7E4F4800EC410A;
-			remoteInfo = View;
-		};
-		6BC07A7D2A7E4FAA00EC410A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6BC07A422A7E4F4800EC410A /* View.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6BC07A322A7E4F4800EC410A;
-			remoteInfo = ViewTests;
-		};
-		6BC07A832A7E4FBA00EC410A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6BC07A6D2A7E4F7600EC410A /* ViewModel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6BC07A552A7E4F7600EC410A;
-			remoteInfo = ViewModel;
-		};
-		6BC07A852A7E4FBA00EC410A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6BC07A6D2A7E4F7600EC410A /* ViewModel.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6BC07A5D2A7E4F7600EC410A;
-			remoteInfo = ViewModelTests;
-		};
-		6BC07A8D2A7E511A00EC410A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6BC079EC2A7E4E9A00EC410A /* Service.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6BC079D42A7E4E9A00EC410A;
-			remoteInfo = Service;
-		};
-		6BC07A8F2A7E511A00EC410A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6BC079EC2A7E4E9A00EC410A /* Service.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6BC079DC2A7E4E9A00EC410A;
-			remoteInfo = ServiceTests;
-		};
-		6BC07A992A7E511A00EC410A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6BC07A172A7E4F1700EC410A /* Model.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6BC079FF2A7E4F1700EC410A;
-			remoteInfo = Model;
-		};
-		6BC07A9B2A7E511A00EC410A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6BC07A172A7E4F1700EC410A /* Model.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6BC07A072A7E4F1700EC410A;
-			remoteInfo = ModelTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -109,10 +59,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6BC07AE42A7E65AF00EC410A /* Service.framework in Embed Frameworks */,
-				6BC07AED2A7E65BF00EC410A /* View.framework in Embed Frameworks */,
-				6BC07AEC2A7E65BA00EC410A /* ViewModel.framework in Embed Frameworks */,
-				6BC07AEB2A7E65B700EC410A /* Model.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,10 +76,7 @@
 		6BC079922A7E4C7C00EC410A /* VideoViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC079962A7E4C7C00EC410A /* VideoViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewerUITests.swift; sourceTree = "<group>"; };
 		6BC079982A7E4C7C00EC410A /* VideoViewerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		6BC079EC2A7E4E9A00EC410A /* Service.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Service.xcodeproj; path = ../Service/Service/Service.xcodeproj; sourceTree = "<group>"; };
-		6BC07A172A7E4F1700EC410A /* Model.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Model.xcodeproj; path = ../Model/Model/Model.xcodeproj; sourceTree = "<group>"; };
-		6BC07A422A7E4F4800EC410A /* View.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = View.xcodeproj; path = ../View/View/View.xcodeproj; sourceTree = "<group>"; };
-		6BC07A6D2A7E4F7600EC410A /* ViewModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ViewModel.xcodeproj; path = ../ViewModel/ViewModel/ViewModel.xcodeproj; sourceTree = "<group>"; };
+		6BC07A422A7E4F4800EC410A /* View.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = View.xcodeproj; path = View/View/View.xcodeproj; sourceTree = "<group>"; };
 		6BC07A9F2A7E5F0B00EC410A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6BC07B0C2A7F8BBD00EC410A /* FeedListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListCoordinator.swift; sourceTree = "<group>"; };
 		6BC07B0E2A7F8BD400EC410A /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
@@ -147,10 +90,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BC07AAF2A7E60FD00EC410A /* Service.framework in Frameworks */,
-				6BC07AB12A7E610200EC410A /* View.framework in Frameworks */,
-				6BC07AAC2A7E60FA00EC410A /* Model.framework in Frameworks */,
-				6BC07AB32A7E610600EC410A /* ViewModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,15 +110,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B7244312A83BF5E0034BC6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B7244362A83BF5E0034BC6B /* View.framework */,
+				6B7244382A83BF5E0034BC6B /* ViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6BC0796F2A7E4C7A00EC410A = {
 			isa = PBXGroup;
 			children = (
-				6BC07A762A7E4F9E00EC410A /* Subproject */,
 				6BC0797A2A7E4C7A00EC410A /* VideoViewer */,
 				6BC0798B2A7E4C7C00EC410A /* VideoViewerTests */,
 				6BC079952A7E4C7C00EC410A /* VideoViewerUITests */,
 				6BC079792A7E4C7A00EC410A /* Products */,
-				6BC07AAB2A7E60FA00EC410A /* Frameworks */,
+				6BC07AAB2A7E60FA00EC410A /* Subprojects */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,58 +182,12 @@
 			path = VideoViewerUITests;
 			sourceTree = "<group>";
 		};
-		6BC07A762A7E4F9E00EC410A /* Subproject */ = {
+		6BC07AAB2A7E60FA00EC410A /* Subprojects */ = {
 			isa = PBXGroup;
 			children = (
-				6BC079EC2A7E4E9A00EC410A /* Service.xcodeproj */,
-				6BC07A6D2A7E4F7600EC410A /* ViewModel.xcodeproj */,
-				6BC07A172A7E4F1700EC410A /* Model.xcodeproj */,
 				6BC07A422A7E4F4800EC410A /* View.xcodeproj */,
 			);
-			path = Subproject;
-			sourceTree = "<group>";
-		};
-		6BC07A772A7E4FAA00EC410A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6BC07A7C2A7E4FAA00EC410A /* View.framework */,
-				6BC07A7E2A7E4FAA00EC410A /* ViewTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6BC07A7F2A7E4FBA00EC410A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6BC07A842A7E4FBA00EC410A /* ViewModel.framework */,
-				6BC07A862A7E4FBA00EC410A /* ViewModelTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6BC07A892A7E511A00EC410A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6BC07A8E2A7E511A00EC410A /* Service.framework */,
-				6BC07A902A7E511A00EC410A /* ServiceTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6BC07A952A7E511A00EC410A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6BC07A9A2A7E511A00EC410A /* Model.framework */,
-				6BC07A9C2A7E511A00EC410A /* ModelTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6BC07AAB2A7E60FA00EC410A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
+			name = Subprojects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,20 +283,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 6BC07A952A7E511A00EC410A /* Products */;
-					ProjectRef = 6BC07A172A7E4F1700EC410A /* Model.xcodeproj */;
-				},
-				{
-					ProductGroup = 6BC07A892A7E511A00EC410A /* Products */;
-					ProjectRef = 6BC079EC2A7E4E9A00EC410A /* Service.xcodeproj */;
-				},
-				{
-					ProductGroup = 6BC07A772A7E4FAA00EC410A /* Products */;
+					ProductGroup = 6B7244312A83BF5E0034BC6B /* Products */;
 					ProjectRef = 6BC07A422A7E4F4800EC410A /* View.xcodeproj */;
-				},
-				{
-					ProductGroup = 6BC07A7F2A7E4FBA00EC410A /* Products */;
-					ProjectRef = 6BC07A6D2A7E4F7600EC410A /* ViewModel.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -408,60 +297,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6BC07A7C2A7E4FAA00EC410A /* View.framework */ = {
+		6B7244362A83BF5E0034BC6B /* View.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = View.framework;
-			remoteRef = 6BC07A7B2A7E4FAA00EC410A /* PBXContainerItemProxy */;
+			remoteRef = 6B7244352A83BF5E0034BC6B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6BC07A7E2A7E4FAA00EC410A /* ViewTests.xctest */ = {
+		6B7244382A83BF5E0034BC6B /* ViewTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ViewTests.xctest;
-			remoteRef = 6BC07A7D2A7E4FAA00EC410A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6BC07A842A7E4FBA00EC410A /* ViewModel.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ViewModel.framework;
-			remoteRef = 6BC07A832A7E4FBA00EC410A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6BC07A862A7E4FBA00EC410A /* ViewModelTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ViewModelTests.xctest;
-			remoteRef = 6BC07A852A7E4FBA00EC410A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6BC07A8E2A7E511A00EC410A /* Service.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Service.framework;
-			remoteRef = 6BC07A8D2A7E511A00EC410A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6BC07A902A7E511A00EC410A /* ServiceTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ServiceTests.xctest;
-			remoteRef = 6BC07A8F2A7E511A00EC410A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6BC07A9A2A7E511A00EC410A /* Model.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Model.framework;
-			remoteRef = 6BC07A992A7E511A00EC410A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6BC07A9C2A7E511A00EC410A /* ModelTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ModelTests.xctest;
-			remoteRef = 6BC07A9B2A7E511A00EC410A /* PBXContainerItemProxy */;
+			remoteRef = 6B7244372A83BF5E0034BC6B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

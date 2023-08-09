@@ -10,10 +10,10 @@
 		6B3712282A81055700987BB0 /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3712272A81055700987BB0 /* CacheImage.swift */; };
 		6B7243AE2A8138060034BC6B /* FirstApiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7243AD2A8138060034BC6B /* FirstApiView.swift */; };
 		6B7243BE2A83AE380034BC6B /* ViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07A372A7E4F4800EC410A /* ViewTests.swift */; };
+		6B72443E2A83BF920034BC6B /* ViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B72442B2A83BF500034BC6B /* ViewModel.framework */; };
 		6BC07A332A7E4F4800EC410A /* View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07A2A2A7E4F4800EC410A /* View.framework */; };
 		6BC07A392A7E4F4800EC410A /* View.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC07A2D2A7E4F4800EC410A /* View.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6BC07AF72A7EB74000EC410A /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07AF62A7EB74000EC410A /* PostView.swift */; };
-		6BC07AF92A7EB75200EC410A /* ViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07AF82A7EB75200EC410A /* ViewModel.framework */; };
 		6BC07AFF2A7F49A700EC410A /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07AFE2A7F49A700EC410A /* PostDetailView.swift */; };
 		6BC07B072A7F741400EC410A /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B062A7F741400EC410A /* PostListView.swift */; };
 		6BC07B092A7F74F900EC410A /* UserProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B082A7F74F900EC410A /* UserProfileDetailView.swift */; };
@@ -23,6 +23,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6B72442A2A83BF500034BC6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B7244252A83BF500034BC6B /* ViewModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BC07A552A7E4F7600EC410A;
+			remoteInfo = ViewModel;
+		};
+		6B72442C2A83BF500034BC6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B7244252A83BF500034BC6B /* ViewModel.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BC07A5D2A7E4F7600EC410A;
+			remoteInfo = ViewModelTests;
+		};
 		6BC07A342A7E4F4800EC410A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6BC07A212A7E4F4800EC410A /* Project object */;
@@ -35,12 +49,12 @@
 /* Begin PBXFileReference section */
 		6B3712272A81055700987BB0 /* CacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
 		6B7243AD2A8138060034BC6B /* FirstApiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstApiView.swift; sourceTree = "<group>"; };
+		6B7244252A83BF500034BC6B /* ViewModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ViewModel.xcodeproj; path = /Users/abhiraj/Documents/code/SwiftPractise/VideoViewer/Subproject/../ViewModel/ViewModel/ViewModel.xcodeproj; sourceTree = "<absolute>"; };
 		6BC07A2A2A7E4F4800EC410A /* View.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = View.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07A2D2A7E4F4800EC410A /* View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		6BC07A322A7E4F4800EC410A /* ViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07A372A7E4F4800EC410A /* ViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTests.swift; sourceTree = "<group>"; };
 		6BC07AF62A7EB74000EC410A /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
-		6BC07AF82A7EB75200EC410A /* ViewModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ViewModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07AFE2A7F49A700EC410A /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 		6BC07B062A7F741400EC410A /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		6BC07B082A7F74F900EC410A /* UserProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileDetailView.swift; sourceTree = "<group>"; };
@@ -54,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BC07AF92A7EB75200EC410A /* ViewModel.framework in Frameworks */,
+				6B72443E2A83BF920034BC6B /* ViewModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B7244262A83BF500034BC6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B72442B2A83BF500034BC6B /* ViewModel.framework */,
+				6B72442D2A83BF500034BC6B /* ViewModelTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6BC07A202A7E4F4800EC410A = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +139,7 @@
 		6BC07AD32A7E644B00EC410A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6BC07AF82A7EB75200EC410A /* ViewModel.framework */,
+				6B7244252A83BF500034BC6B /* ViewModel.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,6 +224,12 @@
 			mainGroup = 6BC07A202A7E4F4800EC410A;
 			productRefGroup = 6BC07A2B2A7E4F4800EC410A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6B7244262A83BF500034BC6B /* Products */;
+					ProjectRef = 6B7244252A83BF500034BC6B /* ViewModel.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6BC07A292A7E4F4800EC410A /* View */,
@@ -208,6 +237,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6B72442B2A83BF500034BC6B /* ViewModel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ViewModel.framework;
+			remoteRef = 6B72442A2A83BF500034BC6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B72442D2A83BF500034BC6B /* ViewModelTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ViewModelTests.xctest;
+			remoteRef = 6B72442C2A83BF500034BC6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6BC07A282A7E4F4800EC410A /* Resources */ = {

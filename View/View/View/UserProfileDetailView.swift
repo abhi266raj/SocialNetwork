@@ -46,3 +46,7 @@ public struct UserProfileDetailView: View {
             .background(Themes.background)
     }
 }
+
+#Preview {
+    Text("Hello")
+}

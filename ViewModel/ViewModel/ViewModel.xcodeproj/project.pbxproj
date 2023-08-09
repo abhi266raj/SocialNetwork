@@ -12,13 +12,54 @@
 		6BC07A632A7E4F7600EC410A /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07A622A7E4F7600EC410A /* ViewModelTests.swift */; };
 		6BC07A642A7E4F7600EC410A /* ViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC07A582A7E4F7600EC410A /* ViewModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6BC07AA12A7E5F9E00EC410A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07AA02A7E5F9E00EC410A /* API.swift */; };
-		6BC07AF12A7E67A200EC410A /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07AA32A7E60AF00EC410A /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6BC07AF52A7EAD8200EC410A /* FeedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07AF42A7EAD8200EC410A /* FeedListViewModel.swift */; };
 		6BC07AFB2A7F430400EC410A /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07AFA2A7F430400EC410A /* PostDetailViewModel.swift */; };
 		6BC07B012A7F6CB600EC410A /* ProfileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07B002A7F6CB600EC410A /* ProfileDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6B7244122A83BF0A0034BC6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B72440D2A83BF0A0034BC6B /* Model.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BC079FF2A7E4F1700EC410A;
+			remoteInfo = Model;
+		};
+		6B7244142A83BF0A0034BC6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B72440D2A83BF0A0034BC6B /* Model.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BC07A072A7E4F1700EC410A;
+			remoteInfo = ModelTests;
+		};
+		6B7244212A83BF360034BC6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B72441C2A83BF360034BC6B /* Service.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BC079D42A7E4E9A00EC410A;
+			remoteInfo = Service;
+		};
+		6B7244232A83BF360034BC6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B72441C2A83BF360034BC6B /* Service.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BC079DC2A7E4E9A00EC410A;
+			remoteInfo = ServiceTests;
+		};
+		6B72443F2A83BFB60034BC6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B72441C2A83BF360034BC6B /* Service.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BC079D32A7E4E9A00EC410A;
+			remoteInfo = Service;
+		};
+		6B7244452A83BFBA0034BC6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B72440D2A83BF0A0034BC6B /* Model.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BC079FE2A7E4F1700EC410A;
+			remoteInfo = Model;
+		};
 		6BC07A5F2A7E4F7600EC410A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6BC07A4C2A7E4F7600EC410A /* Project object */;
@@ -35,7 +76,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6BC07AF12A7E67A200EC410A /* Service.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,13 +84,13 @@
 
 /* Begin PBXFileReference section */
 		6B7243AB2A8129E60034BC6B /* APIResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResultViewModel.swift; sourceTree = "<group>"; };
+		6B72440D2A83BF0A0034BC6B /* Model.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Model.xcodeproj; path = ../../Model/Model/Model.xcodeproj; sourceTree = "<group>"; };
+		6B72441C2A83BF360034BC6B /* Service.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Service.xcodeproj; path = /Users/abhiraj/Documents/code/SwiftPractise/VideoViewer/Subproject/../Service/Service/Service.xcodeproj; sourceTree = "<absolute>"; };
 		6BC07A552A7E4F7600EC410A /* ViewModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07A582A7E4F7600EC410A /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
 		6BC07A5D2A7E4F7600EC410A /* ViewModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07A622A7E4F7600EC410A /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 		6BC07AA02A7E5F9E00EC410A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		6BC07AA32A7E60AF00EC410A /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BC07AB52A7E622400EC410A /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07AF42A7EAD8200EC410A /* FeedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewModel.swift; sourceTree = "<group>"; };
 		6BC07AFA2A7F430400EC410A /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 		6BC07B002A7F6CB600EC410A /* ProfileDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewModel.swift; sourceTree = "<group>"; };
@@ -75,6 +115,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B72440E2A83BF0A0034BC6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B7244132A83BF0A0034BC6B /* Model.framework */,
+				6B7244152A83BF0A0034BC6B /* ModelTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B72441D2A83BF360034BC6B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B7244222A83BF360034BC6B /* Service.framework */,
+				6B7244242A83BF360034BC6B /* ServiceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6BC07A4B2A7E4F7600EC410A = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +176,8 @@
 		6BC07AA22A7E60AF00EC410A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6BC07AB52A7E622400EC410A /* Model.framework */,
-				6BC07AA32A7E60AF00EC410A /* Service.framework */,
+				6B72441C2A83BF360034BC6B /* Service.xcodeproj */,
+				6B72440D2A83BF0A0034BC6B /* Model.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -151,6 +209,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				6B7244462A83BFBA0034BC6B /* PBXTargetDependency */,
+				6B7244402A83BFB60034BC6B /* PBXTargetDependency */,
 			);
 			name = ViewModel;
 			productName = ViewModel;
@@ -205,6 +265,16 @@
 			mainGroup = 6BC07A4B2A7E4F7600EC410A;
 			productRefGroup = 6BC07A562A7E4F7600EC410A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6B72440E2A83BF0A0034BC6B /* Products */;
+					ProjectRef = 6B72440D2A83BF0A0034BC6B /* Model.xcodeproj */;
+				},
+				{
+					ProductGroup = 6B72441D2A83BF360034BC6B /* Products */;
+					ProjectRef = 6B72441C2A83BF360034BC6B /* Service.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6BC07A542A7E4F7600EC410A /* ViewModel */,
@@ -212,6 +282,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6B7244132A83BF0A0034BC6B /* Model.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Model.framework;
+			remoteRef = 6B7244122A83BF0A0034BC6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B7244152A83BF0A0034BC6B /* ModelTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ModelTests.xctest;
+			remoteRef = 6B7244142A83BF0A0034BC6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B7244222A83BF360034BC6B /* Service.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Service.framework;
+			remoteRef = 6B7244212A83BF360034BC6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6B7244242A83BF360034BC6B /* ServiceTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ServiceTests.xctest;
+			remoteRef = 6B7244232A83BF360034BC6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6BC07A532A7E4F7600EC410A /* Resources */ = {
@@ -254,6 +355,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6B7244402A83BFB60034BC6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Service;
+			targetProxy = 6B72443F2A83BFB60034BC6B /* PBXContainerItemProxy */;
+		};
+		6B7244462A83BFBA0034BC6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Model;
+			targetProxy = 6B7244452A83BFBA0034BC6B /* PBXContainerItemProxy */;
+		};
 		6BC07A602A7E4F7600EC410A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6BC07A542A7E4F7600EC410A /* ViewModel */;
