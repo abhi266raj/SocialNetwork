@@ -9,18 +9,33 @@ import ViewModel
 import View
 import SwiftUI
 
-class FeedListCoordinator: Coordinator {
-    @Bindable var viewModel: FeedListViewModel
-    let view: FeedView
-    private var detailCoordinator:PostDetailCoordinator? = nil
+struct FeedContentFactory : AppContentFactory {
+   
+    typealias ViewModelElement = FeedListViewModel
+    typealias ViewElement = FeedView
     
-    init() {
-        let viewModel = FeedListViewModel()
-        self.viewModel = viewModel
-        self.view = FeedView(viewModel: viewModel)
+    var appDependecy: AppDependency
+    
+    func createViewModel() -> ViewModelElement {
+        ViewModelElement(networkService: appDependecy.networkService)
     }
     
-    func createView() -> AnyView {
+    func createView(from viewModel: ViewModelElement) -> ViewElement {
+        ViewElement(viewModel: viewModel)
+    }
+    
+}
+
+class FeedListCoordinator: AppCoordinator<FeedContentFactory> {
+  
+    convenience init(appDependecy: AppDependency = DIConainer.shared) {
+        let contentBuilder = ContentBuilder(appDependecy: appDependecy)
+        self.init(contentBuilder: contentBuilder)
+    }
+    
+    private var detailCoordinator:PostDetailCoordinator? = nil
+        
+    override func createView() -> AnyView {
         AnyView(self.view.sheet(item: $viewModel.selectedPostViewModel) {
             [weak self] in
             self?.viewModel.selectedPostViewModel = nil
@@ -31,17 +46,20 @@ class FeedListCoordinator: Coordinator {
         })
         
     }
-    
+   
     func getCoordinator(postId: Int) -> PostDetailCoordinator {
         if let coordinator =  detailCoordinator {
             return coordinator
         }
         
-        let coordinator  = PostDetailCoordinator(postId)
+        let coordinator  = PostDetailCoordinator(postId, appDependecy: appDependecy)
         detailCoordinator = coordinator
         return coordinator
     }
 }
+
+
+
 
 
 

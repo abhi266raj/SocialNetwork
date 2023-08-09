@@ -14,6 +14,14 @@
 - View
 - ViewModel
 - Main App Coordinator
+- DI
+
+
+## Design Pattern 
+### In coordianator
+- Abstract factory for coordiantor which create view and view Model pair
+- DI container struct contains various DI elements
+- Cosntruction role, providing Depedncy is role of factory. 
 
 ## Flow
 

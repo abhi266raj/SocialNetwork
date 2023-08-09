@@ -9,18 +9,36 @@ import ViewModel
 import View
 import SwiftUI
 
-class ProfileCoordinator: Coordinator {
-    @Bindable var viewModel: ProfileDetailViewModel
-    private let view: UserProfileDetailView
-    private var detailCoordinator:PostDetailCoordinator? = nil
+
+
+struct ProfileContentFactory: AppContentFactory {
+    typealias ViewModelElement = ProfileDetailViewModel
+    typealias ViewElement = UserProfileDetailView
     
-    public init(_ userName: String) {
-        let viewModel = ProfileDetailViewModel(userName: userName)
-        self.viewModel = viewModel
-        self.view = UserProfileDetailView(viewModel: viewModel)
+    var appDependecy: AppDependency
+    var userName: String
+    
+    func createViewModel() -> ViewModelElement {
+        ViewModelElement(userName: userName, networkService: appDependecy.networkService)
     }
     
-    func createView() -> AnyView {
+    func createView(from viewModel: ViewModelElement) -> ViewElement {
+        ViewElement(viewModel: viewModel)
+    }
+    
+}
+
+class ProfileCoordinator: AppCoordinator<ProfileContentFactory> {
+   
+    private var detailCoordinator:PostDetailCoordinator? = nil
+    
+    convenience init(_ userName: String, appDependecy: AppDependency) {
+        let viewModel = ProfileDetailViewModel(userName: userName)
+        let factory = ProfileContentFactory(appDependecy: appDependecy, userName: userName)
+        self.init(contentBuilder: factory)
+    }
+    
+    override func createView() -> AnyView {
         AnyView(self.view.sheet(item: $viewModel.selectedViewModel) {
             [weak self] in
             self?.viewModel.selectedViewModel = nil
@@ -35,7 +53,7 @@ class ProfileCoordinator: Coordinator {
             return coordinator
         }
         
-        let coordinator  = PostDetailCoordinator(postId)
+        let coordinator  = PostDetailCoordinator(postId, appDependecy: appDependecy)
         detailCoordinator = coordinator
         return coordinator
     }
