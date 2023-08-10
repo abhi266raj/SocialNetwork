@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6B7243B42A839DEA0034BC6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7243B32A839DEA0034BC6B /* AppCoordinator.swift */; };
-		6B7244532A83D9630034BC6B /* ViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7244522A83D9630034BC6B /* ViewModel.framework */; };
-		6B7244542A83D9630034BC6B /* ViewModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7244522A83D9630034BC6B /* ViewModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B7244552A83D97D0034BC6B /* View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7244362A83BF5E0034BC6B /* View.framework */; };
 		6B7244562A83D97D0034BC6B /* View.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7244362A83BF5E0034BC6B /* View.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6BC0797C2A7E4C7A00EC410A /* VideoViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC0797B2A7E4C7A00EC410A /* VideoViewerApp.swift */; };
@@ -63,7 +61,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6B7244542A83D9630034BC6B /* ViewModel.framework in Embed Frameworks */,
 				6B7244562A83D97D0034BC6B /* View.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -73,7 +70,6 @@
 
 /* Begin PBXFileReference section */
 		6B7243B32A839DEA0034BC6B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		6B7244522A83D9630034BC6B /* ViewModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ViewModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC079782A7E4C7A00EC410A /* VideoViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC0797B2A7E4C7A00EC410A /* VideoViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewerApp.swift; sourceTree = "<group>"; };
 		6BC0797F2A7E4C7C00EC410A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B7244532A83D9630034BC6B /* ViewModel.framework in Frameworks */,
 				6B7244552A83D97D0034BC6B /* View.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,7 +126,6 @@
 		6B7244512A83D9630034BC6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6B7244522A83D9630034BC6B /* ViewModel.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

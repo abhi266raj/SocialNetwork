@@ -8,29 +8,91 @@
 import XCTest
 @testable import Service
 
-final class ServiceTests: XCTestCase {
+class NetworkServiceTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    // Create a mock URLSessionProtocol for testing
+    class MockURLSession: URLSessionProtocol {
+        var testData: Data?
+        var testResponse: URLResponse?
+        var testError: Error?
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        func data(for request: URLRequest) async throws -> (Data, URLResponse) {
+            if let testData = testData, let testResponse = testResponse {
+                return (testData, testResponse)
+            }
+            throw testError!
         }
     }
 
+    func testFetchUsingSuccess() async throws {
+        // Create a mock URLSession
+        let mockURLSession = MockURLSession()
+
+        // Prepare test data
+        let jsonData = """
+            {"key": "value"}
+        """.data(using: .utf8)!
+        let response = HTTPURLResponse(url: URL(string: "https://example.com")!, statusCode: 200, httpVersion: nil, headerFields: nil)
+
+        mockURLSession.testData = jsonData
+        mockURLSession.testResponse = response
+
+        // Create a NetworkObject for testing
+        struct TestNetworkObject: NetworkObject {
+            typealias RequestObject = MockRequestBuilder
+            typealias ResponseObject = ModelResponseBuilder<TestModel>
+
+            var requestBuilder: RequestObject { MockRequestBuilder() }
+            var responseBuilder: ResponseObject { ModelResponseBuilder<TestModel>() }
+        }
+
+        // Create a NetworkServiceImp instance with the mock URLSession
+        let networkService = NetworkServiceImp(urlSession: mockURLSession)
+
+        // Perform the test
+        let result = try await networkService.fetchUsing(TestNetworkObject())
+
+        // Validate the result
+        XCTAssertEqual(result.key, "value")
+    }
+
+    func testFetchUsingFailure() async {
+        // Create a mock URLSession
+        let mockURLSession = MockURLSession()
+
+        // Prepare test error
+        let testError = NSError(domain: "TestErrorDomain", code: 123, userInfo: nil)
+        mockURLSession.testError = testError
+
+        // Create a NetworkObject for testing
+        struct TestNetworkObject: NetworkObject {
+            typealias RequestObject = MockRequestBuilder
+            typealias ResponseObject = ModelResponseBuilder<TestModel>
+
+            var requestBuilder: RequestObject { MockRequestBuilder() }
+            var responseBuilder: ResponseObject { ModelResponseBuilder<TestModel>() }
+        }
+
+        // Create a NetworkServiceImp instance with the mock URLSession
+        let networkService = NetworkServiceImp(urlSession: mockURLSession)
+
+        // Perform the test and expect an error
+        do {
+            _ = try await networkService.fetchUsing(TestNetworkObject())
+            XCTFail("Expected an error.")
+        } catch {
+            XCTAssertEqual(error as NSError, testError)
+        }
+    }
+
+    // Define mock classes for testing
+    struct MockRequestBuilder: RequestBuilder {
+        func createRequest() -> URLRequest {
+            return URLRequest(url: URL(string: "https://example.com")!)
+        }
+    }
+
+    struct TestModel: Decodable {
+        let key: String
+    }
 }

@@ -29,14 +29,24 @@ public protocol ResponseBuilder {
     func createResponse(_ data: Data) throws -> ModelObject
 }
 
+public protocol URLSessionProtocol {
+    func data(for request: URLRequest) async throws -> (Data, URLResponse)
+}
+
+extension URLSession : URLSessionProtocol {
+}
+
 public class NetworkServiceImp: NetworkService {
-    public init() {} // Add public initializer if needed
+    let session: URLSessionProtocol
+    public init(urlSession : URLSessionProtocol = URLSession.shared) {
+        self.session = urlSession
+    }
     
     public func fetchUsing<T: NetworkObject>(_ object: T) async throws -> T.ResponseObject.ModelObject {
         let request = object.requestBuilder.createRequest()
         
         do {
-            let (data, _) = try await URLSession.shared.data(for: request)
+            let (data, _) = try await session.data(for: request)
             return try object.responseBuilder.createResponse(data)
         } catch {
             throw error

@@ -44,9 +44,7 @@ public protocol ApiCallLodable {
             }
             return response
         }catch let (error) {
-            print(error.localizedDescription)
             state = .error(error.localizedDescription)
-            print(error.localizedDescription.description)
             throw error
         }
     }
