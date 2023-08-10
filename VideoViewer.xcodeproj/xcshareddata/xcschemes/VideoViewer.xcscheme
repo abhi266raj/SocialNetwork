@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6BC079FE2A7E4F1700EC410A"
-               BuildableName = "Model.framework"
-               BlueprintName = "Model"
-               ReferencedContainer = "container:Model.xcodeproj">
+               BlueprintIdentifier = "6BC079772A7E4C7A00EC410A"
+               BuildableName = "VideoViewer.app"
+               BlueprintName = "VideoViewer"
+               ReferencedContainer = "container:VideoViewer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,22 +26,29 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
-      <TestPlans>
-         <TestPlanReference
-            reference = "container:../../../Model.xctestplan"
-            default = "YES">
-         </TestPlanReference>
-      </TestPlans>
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldAutocreateTestPlan = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6BC07A062A7E4F1700EC410A"
-               BuildableName = "ModelTests.xctest"
-               BlueprintName = "ModelTests"
-               ReferencedContainer = "container:Model.xcodeproj">
+               BlueprintIdentifier = "6BC079872A7E4C7C00EC410A"
+               BuildableName = "VideoViewerTests.xctest"
+               BlueprintName = "VideoViewerTests"
+               ReferencedContainer = "container:VideoViewer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6BC079912A7E4C7C00EC410A"
+               BuildableName = "VideoViewerUITests.xctest"
+               BlueprintName = "VideoViewerUITests"
+               ReferencedContainer = "container:VideoViewer.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -56,6 +63,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6BC079772A7E4C7A00EC410A"
+            BuildableName = "VideoViewer.app"
+            BlueprintName = "VideoViewer"
+            ReferencedContainer = "container:VideoViewer.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -63,15 +80,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6BC079FE2A7E4F1700EC410A"
-            BuildableName = "Model.framework"
-            BlueprintName = "Model"
-            ReferencedContainer = "container:Model.xcodeproj">
+            BlueprintIdentifier = "6BC079772A7E4C7A00EC410A"
+            BuildableName = "VideoViewer.app"
+            BlueprintName = "VideoViewer"
+            ReferencedContainer = "container:VideoViewer.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

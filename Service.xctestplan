@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "2F9BAE5E-5DD7-444C-8ADB-E2DF85C4868B",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Service.xcodeproj",
+        "identifier" : "6BC079DB2A7E4E9A00EC410A",
+        "name" : "ServiceTests"
+      }
+    }
+  ],
+  "version" : 1
+}

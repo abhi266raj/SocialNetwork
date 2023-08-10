@@ -7,26 +7,20 @@
 
 import XCTest
 
+
+
 final class FeedListTests: XCTestCase {
-
-    override class var runsForEachTargetApplicationUIConfiguration: Bool {
-        true
-    }
-
+    let app = XCUIApplication()
+    
     override func setUpWithError() throws {
         continueAfterFailure = false
+        app.launch()
+        let page = FeedPage()
+        page.create(app: app)
     }
 
-    func testLaunch() throws {
-        let app = XCUIApplication()
-        app.launch()
-
-        // Insert steps here to perform after app launch but before taking a screenshot,
-        // such as logging into a test account or navigating somewhere in the app
-
-        let attachment = XCTAttachment(screenshot: app.screenshot())
-        attachment.name = "Launch Screen"
-        attachment.lifetime = .keepAlways
-        add(attachment)
+    func testFirstItemInFeedExists() throws {
+        let firstItem = app.descendants(matching: .any).matching(identifier: "item0").element
+        XCTAssert(firstItem.waitForExistence(timeout: 5), "First Item should exist")
     }
 }

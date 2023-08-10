@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6BC079FE2A7E4F1700EC410A"
-               BuildableName = "Model.framework"
-               BlueprintName = "Model"
-               ReferencedContainer = "container:Model.xcodeproj">
+               BlueprintIdentifier = "6BC079D32A7E4E9A00EC410A"
+               BuildableName = "Service.framework"
+               BlueprintName = "Service"
+               ReferencedContainer = "container:Service.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,7 +29,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:../../../Model.xctestplan"
+            reference = "container:../../Service.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -38,10 +38,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6BC07A062A7E4F1700EC410A"
-               BuildableName = "ModelTests.xctest"
-               BlueprintName = "ModelTests"
-               ReferencedContainer = "container:Model.xcodeproj">
+               BlueprintIdentifier = "6BC079DB2A7E4E9A00EC410A"
+               BuildableName = "ServiceTests.xctest"
+               BlueprintName = "ServiceTests"
+               ReferencedContainer = "container:Service.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -66,10 +66,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6BC079FE2A7E4F1700EC410A"
-            BuildableName = "Model.framework"
-            BlueprintName = "Model"
-            ReferencedContainer = "container:Model.xcodeproj">
+            BlueprintIdentifier = "6BC079D32A7E4E9A00EC410A"
+            BuildableName = "Service.framework"
+            BlueprintName = "Service"
+            ReferencedContainer = "container:Service.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

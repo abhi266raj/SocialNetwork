@@ -10,10 +10,6 @@
 		6B3712282A81055700987BB0 /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3712272A81055700987BB0 /* CacheImage.swift */; };
 		6B7243AE2A8138060034BC6B /* FirstApiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7243AD2A8138060034BC6B /* FirstApiView.swift */; };
 		6B7243BE2A83AE380034BC6B /* ViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07A372A7E4F4800EC410A /* ViewTests.swift */; };
-		6B7244582A83D9C00034BC6B /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7244572A83D9C00034BC6B /* Model.framework */; };
-		6B7244592A83D9C00034BC6B /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7244572A83D9C00034BC6B /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6B72445C2A83D9C50034BC6B /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B72445B2A83D9C50034BC6B /* Service.framework */; };
-		6B72445D2A83D9C50034BC6B /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B72445B2A83D9C50034BC6B /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B72446D2A840D390034BC6B /* ViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B72442B2A83BF500034BC6B /* ViewModel.framework */; };
 		6B72446E2A840D390034BC6B /* ViewModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B72442B2A83BF500034BC6B /* ViewModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6BC07A332A7E4F4800EC410A /* View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07A2A2A7E4F4800EC410A /* View.framework */; };
@@ -58,8 +54,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6B72445D2A83D9C50034BC6B /* Service.framework in Embed Frameworks */,
-				6B7244592A83D9C00034BC6B /* Model.framework in Embed Frameworks */,
 				6B72446E2A840D390034BC6B /* ViewModel.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -71,8 +65,6 @@
 		6B3712272A81055700987BB0 /* CacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
 		6B7243AD2A8138060034BC6B /* FirstApiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstApiView.swift; sourceTree = "<group>"; };
 		6B7244252A83BF500034BC6B /* ViewModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ViewModel.xcodeproj; path = /Users/abhiraj/Documents/code/SwiftPractise/VideoViewer/Subproject/../ViewModel/ViewModel/ViewModel.xcodeproj; sourceTree = "<absolute>"; };
-		6B7244572A83D9C00034BC6B /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B72445B2A83D9C50034BC6B /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07A2A2A7E4F4800EC410A /* View.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = View.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07A2D2A7E4F4800EC410A /* View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		6BC07A322A7E4F4800EC410A /* ViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,8 +83,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B72445C2A83D9C50034BC6B /* Service.framework in Frameworks */,
-				6B7244582A83D9C00034BC6B /* Model.framework in Frameworks */,
 				6B72446D2A840D390034BC6B /* ViewModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,8 +154,6 @@
 		6BC07AD32A7E644B00EC410A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6B72445B2A83D9C50034BC6B /* Service.framework */,
-				6B7244572A83D9C00034BC6B /* Model.framework */,
 				6B7244252A83BF500034BC6B /* ViewModel.xcodeproj */,
 			);
 			name = Frameworks;

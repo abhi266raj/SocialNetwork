@@ -4,4 +4,10 @@
    <FileRef
       location = "container:VideoViewer.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:../Model.xctestplan">
+   </FileRef>
+   <FileRef
+      location = "group:Service.xctestplan">
+   </FileRef>
 </Workspace>
