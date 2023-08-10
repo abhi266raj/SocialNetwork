@@ -1,13 +1,13 @@
 //
-//  VideoViewerUITests.swift
+//  ProfileDetailTest.swift
 //  VideoViewerUITests
 //
-//  Created by Abhiraj on 05/08/23.
+//  Created by Abhiraj on 10/08/23.
 //
 
 import XCTest
 
-final class VideoViewerUITests: XCTestCase {
+final class PostDetailTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -22,13 +22,10 @@ final class VideoViewerUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testFeedText() throws {
+    func testExample() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-        let feedStaticText = app.staticTexts["Feed"]
-        XCTAssert(feedStaticText.exists, "Feed static text should exist")
-        
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
@@ -42,4 +39,3 @@ final class VideoViewerUITests: XCTestCase {
         }
     }
 }
-

@@ -20,8 +20,7 @@ struct DIConainer {
     static let shared:AppDependency = AppDependecyImp()
     
     final private class AppDependecyImp: AppDependency {
-        var networkService: NetworkService = ViewModel.MockNetworkService()
-        //NetworkServiceImp()
+        var networkService: NetworkService = NetworkServiceImp()
     }
 
 }

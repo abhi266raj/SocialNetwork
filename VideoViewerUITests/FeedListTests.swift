@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class VideoViewerUITestsLaunchTests: XCTestCase {
+final class FeedListTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
