@@ -77,7 +77,7 @@ public struct PostView: View {
                                 .frame(alignment: .center)
                                 .padding([.top, .bottom], 4)
                             }
-                        }.background(Themes.other)
+                        }.background(Themes.tertiary)
                         .frame(height:30, alignment: .bottom)
                     }
                         

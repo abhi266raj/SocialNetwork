@@ -31,16 +31,15 @@ struct VideoPlayerView: View {
             CachedAsyncImage(url: imageUrl, urlCache: .imageCache) { phase in
                     switch phase {
                     case .success(let image):
-                        image
-                            .resizable()
-                            .scaledToFit()
-                    case .empty:
+                        ZStack {
+                            image
+                                .resizable()
+                                .scaledToFit()
+                                .blur(radius: 2)
+                            ProgressView()
+                        }
+                     default:
                         ProgressView()
-                    case .failure:
-                        Color.red
-                    @unknown default:
-                        ProgressView()
-                            .scaleEffect(1.5)
                     }
                 }.onTapGesture {
                     player.player?.play()

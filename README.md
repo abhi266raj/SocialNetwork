@@ -50,7 +50,7 @@
 - Theme struct for changing color
 
 ## To do
-- Use di for themes and networking
+- Support for dark mode
 
 ## Unfixed things
 - Gitignore is not setup

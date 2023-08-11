@@ -26,7 +26,7 @@ public struct FeedView: View {
             }
             
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Themes.background)
+            .background(Themes.primary)
     }
 }
 

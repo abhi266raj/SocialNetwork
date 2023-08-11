@@ -37,13 +37,13 @@ public struct UserProfileDetailView: View {
                         
                         //}
                     }.frame(maxWidth: .infinity,minHeight: 100, maxHeight: 100)
-                        .background(Themes.darkBackground)
+                        .background(Themes.secondary)
                     PostListView(viewModelList: profile.postList)
                 }
             }
             
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Themes.background)
+            .background(Themes.primary)
     }
 }
 

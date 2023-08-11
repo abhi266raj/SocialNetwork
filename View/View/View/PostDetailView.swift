@@ -24,7 +24,7 @@ public struct PostDetailView: View {
                     PostVideoView(viewModel: postViewModel) // Show PostView with postViewModel
                 }
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Themes.background)
+            .background(Themes.primary)
     }
 }
 
@@ -52,7 +52,7 @@ public struct PostVideoView: View {
                 ZStack {
                     Text("")
                         .frame(maxWidth: .infinity, maxHeight: .infinity )
-                        .background(Themes.other)
+                        .background(Themes.tertiary)
                     VStack (alignment: .leading) {
                         Spacer()
                         HStack  () {
