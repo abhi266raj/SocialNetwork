@@ -23,7 +23,7 @@ final class ProfileTest: XCTestCase {
 
     func testLikeButton() throws {
         let firstItem = app.descendants(matching: .any).matching(identifier: "item0").element
-        XCTAssert(firstItem.waitForExistence(timeout: 5), "User should have created one post")
+        XCTAssert(firstItem.waitForExistence(timeout: XCTest.timeout), "User should have created one post")
                 
         
     }

@@ -21,6 +21,6 @@ final class FeedListTests: XCTestCase {
 
     func testFirstItemInFeedExists() throws {
         let firstItem = app.descendants(matching: .any).matching(identifier: "item0").element
-        XCTAssert(firstItem.waitForExistence(timeout: 5), "First Item should exist")
+        XCTAssert(firstItem.waitForExistence(timeout: XCTest.timeout), "First Item should exist")
     }
 }

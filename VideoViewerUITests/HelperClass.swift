@@ -14,7 +14,7 @@ extension  XCTest {
 class FeedPage {
     func create(app: XCUIApplication) {
         let feedStaticText = app.staticTexts["Feed"]
-        XCTAssert(feedStaticText.waitForExistence(timeout: 5), "First Item should exist")
+        XCTAssert(feedStaticText.waitForExistence(timeout: XCTest.timeout), "First Item should exist")
     }
 }
 
@@ -24,7 +24,7 @@ class DetailPage {
         let feedPage = FeedPage()
         feedPage.create(app: app)
         let firstItem = app.descendants(matching: .any).matching(identifier: "item0").element
-        XCTAssert(firstItem.waitForExistence(timeout: 5), "First Item should exist")
+        XCTAssert(firstItem.waitForExistence(timeout: XCTest.timeout), "First Item should exist")
         firstItem.firstMatch.tap()
     }
 }
@@ -36,7 +36,7 @@ class ProfilePage {
         let page = DetailPage()
         page.create(app: app)
         let profilePageButton = app.images["Love"]
-        XCTAssert(profilePageButton.waitForExistence(timeout: 5), "Like icon should exist")
+        XCTAssert(profilePageButton.waitForExistence(timeout: XCTest.timeout), "Like icon should exist")
         profilePageButton.firstMatch.tap()
     }
 }

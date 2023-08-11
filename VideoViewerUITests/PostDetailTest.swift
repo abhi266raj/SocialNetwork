@@ -19,7 +19,7 @@ final class PostDetailTest: XCTestCase {
 
     func testLikeButton() throws {
         let likeButton = app.buttons["Love"]
-        XCTAssert(likeButton.waitForExistence(timeout: 5), "Like Button should exist")
+        XCTAssert(likeButton.waitForExistence(timeout: XCTest.timeout), "Like Button should exist")
                                         
         
     }

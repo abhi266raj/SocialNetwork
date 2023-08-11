@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B3DC0122A868D2900899A38 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3DC0112A868D2900899A38 /* Model.framework */; };
+		6B3DC0132A868D2900899A38 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3DC0112A868D2900899A38 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6B3DC0172A868D2D00899A38 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3DC0162A868D2D00899A38 /* Service.framework */; };
+		6B3DC0182A868D2D00899A38 /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3DC0162A868D2D00899A38 /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6B3DC01A2A868D3200899A38 /* ViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3DC0192A868D3200899A38 /* ViewModel.framework */; };
+		6B3DC01B2A868D3200899A38 /* ViewModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3DC0192A868D3200899A38 /* ViewModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B7243B42A839DEA0034BC6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7243B32A839DEA0034BC6B /* AppCoordinator.swift */; };
 		6B7244552A83D97D0034BC6B /* View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7244362A83BF5E0034BC6B /* View.framework */; };
 		6B7244562A83D97D0034BC6B /* View.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7244362A83BF5E0034BC6B /* View.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -63,7 +69,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				6B3DC0182A868D2D00899A38 /* Service.framework in Embed Frameworks */,
+				6B3DC0132A868D2900899A38 /* Model.framework in Embed Frameworks */,
 				6B7244562A83D97D0034BC6B /* View.framework in Embed Frameworks */,
+				6B3DC01B2A868D3200899A38 /* ViewModel.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +80,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6B3DC0112A868D2900899A38 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3DC0162A868D2D00899A38 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B3DC0192A868D3200899A38 /* ViewModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ViewModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7243B32A839DEA0034BC6B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		6B7244792A851E1F0034BC6B /* ProfileTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTest.swift; sourceTree = "<group>"; };
 		6B72447B2A851E2E0034BC6B /* PostDetailTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailTest.swift; sourceTree = "<group>"; };
@@ -97,7 +109,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B3DC0172A868D2D00899A38 /* Service.framework in Frameworks */,
+				6B3DC0122A868D2900899A38 /* Model.framework in Frameworks */,
 				6B7244552A83D97D0034BC6B /* View.framework in Frameworks */,
+				6B3DC01A2A868D3200899A38 /* ViewModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +145,9 @@
 		6B7244512A83D9630034BC6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B3DC0192A868D3200899A38 /* ViewModel.framework */,
+				6B3DC0162A868D2D00899A38 /* Service.framework */,
+				6B3DC0112A868D2900899A38 /* Model.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
