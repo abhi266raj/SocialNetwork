@@ -61,5 +61,18 @@
 - Unit Testing
 - Visual Diff Testing
 
+## System Diagram App Launch Flow
+
+```mermaid
+graph TD
+
+A[APP] --> |On launch |B[Coordinator]
+A --> |Depedency| AA[Networking]
+B --> C[Coordinator Factory]
+C --> D[ViewModel]
+C --> E[View]
+D --> F[Model]
+
+
 
 
