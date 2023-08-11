@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B2664EC2A86BD7D00A88532 /* ViewModel.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B72442B2A83BF500034BC6B /* ViewModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B3712282A81055700987BB0 /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3712272A81055700987BB0 /* CacheImage.swift */; };
 		6B7243AE2A8138060034BC6B /* FirstApiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7243AD2A8138060034BC6B /* FirstApiView.swift */; };
 		6B7243BE2A83AE380034BC6B /* ViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07A372A7E4F4800EC410A /* ViewTests.swift */; };
@@ -48,6 +49,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		6B2664E92A86BD7200A88532 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				6B2664EC2A86BD7D00A88532 /* ViewModel.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6B72445A2A83D9C10034BC6B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,6 +193,7 @@
 				6BC07A272A7E4F4800EC410A /* Frameworks */,
 				6BC07A282A7E4F4800EC410A /* Resources */,
 				6B72445A2A83D9C10034BC6B /* Embed Frameworks */,
+				6B2664E92A86BD7200A88532 /* CopyFiles */,
 			);
 			buildRules = (
 			);

@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B2664D82A86B63A00A88532 /* View.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7244362A83BF5E0034BC6B /* View.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6B2664E42A86B82D00A88532 /* View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7244362A83BF5E0034BC6B /* View.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6B2664E82A86BD0200A88532 /* View.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B7244362A83BF5E0034BC6B /* View.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6B2664F62A86BE1A00A88532 /* Model.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B2664DD2A86B82D00A88532 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6B2664F72A86BE2000A88532 /* Service.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B2664DE2A86B82D00A88532 /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6B2664F82A86BE2300A88532 /* ViewModel.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B2664DF2A86B82D00A88532 /* ViewModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B7243B42A839DEA0034BC6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7243B32A839DEA0034BC6B /* AppCoordinator.swift */; };
-		6B7244552A83D97D0034BC6B /* View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7244362A83BF5E0034BC6B /* View.framework */; };
-		6B7244562A83D97D0034BC6B /* View.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B7244362A83BF5E0034BC6B /* View.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B72447A2A851E1F0034BC6B /* ProfileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7244792A851E1F0034BC6B /* ProfileTest.swift */; };
 		6B72447C2A851E2F0034BC6B /* PostDetailTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B72447B2A851E2E0034BC6B /* PostDetailTest.swift */; };
 		6BC0797C2A7E4C7A00EC410A /* VideoViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC0797B2A7E4C7A00EC410A /* VideoViewerApp.swift */; };
@@ -57,20 +61,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6BC07AAE2A7E60FA00EC410A /* Embed Frameworks */ = {
+		6B2664D92A86B63A00A88532 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6B2664D82A86B63A00A88532 /* View.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		6B2664DB2A86B71A00A88532 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6B7244562A83D97D0034BC6B /* View.framework in Embed Frameworks */,
+				6B2664F82A86BE2300A88532 /* ViewModel.framework in CopyFiles */,
+				6B2664F72A86BE2000A88532 /* Service.framework in CopyFiles */,
+				6B2664F62A86BE1A00A88532 /* Model.framework in CopyFiles */,
+				6B2664E82A86BD0200A88532 /* View.framework in CopyFiles */,
 			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6B2664DD2A86B82D00A88532 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B2664DE2A86B82D00A88532 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B2664DF2A86B82D00A88532 /* ViewModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ViewModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7243B32A839DEA0034BC6B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		6B7244792A851E1F0034BC6B /* ProfileTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTest.swift; sourceTree = "<group>"; };
 		6B72447B2A851E2E0034BC6B /* PostDetailTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailTest.swift; sourceTree = "<group>"; };
@@ -97,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B7244552A83D97D0034BC6B /* View.framework in Frameworks */,
+				6B2664E42A86B82D00A88532 /* View.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +150,9 @@
 		6B7244512A83D9630034BC6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B2664DD2A86B82D00A88532 /* Model.framework */,
+				6B2664DE2A86B82D00A88532 /* Service.framework */,
+				6B2664DF2A86B82D00A88532 /* ViewModel.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -218,7 +241,9 @@
 				6BC079742A7E4C7A00EC410A /* Sources */,
 				6BC079752A7E4C7A00EC410A /* Frameworks */,
 				6BC079762A7E4C7A00EC410A /* Resources */,
-				6BC07AAE2A7E60FA00EC410A /* Embed Frameworks */,
+				6B2664D92A86B63A00A88532 /* Embed Frameworks */,
+				6B2664DB2A86B71A00A88532 /* CopyFiles */,
+				6B2664E72A86BCE600A88532 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -357,6 +382,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B2664E72A86BCE600A88532 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6BC079742A7E4C7A00EC410A /* Sources */ = {
@@ -540,6 +585,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -547,12 +593,18 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MERGEABLE_LIBRARY = NO;
+				MERGED_BINARY_TYPE = none;
 				PRODUCT_BUNDLE_IDENTIFIER = www.abhiraj.com.VideoViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				STRIP_INSTALLED_PRODUCT = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -572,6 +624,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -579,12 +632,17 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MERGEABLE_LIBRARY = NO;
+				MERGED_BINARY_TYPE = none;
 				PRODUCT_BUNDLE_IDENTIFIER = www.abhiraj.com.VideoViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				STRIP_INSTALLED_PRODUCT = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

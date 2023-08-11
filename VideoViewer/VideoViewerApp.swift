@@ -13,7 +13,9 @@ private struct VideoViewerApp: App {
     var coordinator: any Coordinator = FeedListCoordinator()
     var body: some Scene {
         WindowGroup {
-            coordinator.createView()
+            VStack {
+                coordinator.createView()
+            }
         }
     }
 }
