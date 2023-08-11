@@ -36,7 +36,7 @@ struct VideoPlayerView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .blur(radius: 2)
-                            ProgressView()
+                           // ProgressView()
                         }
                      default:
                         ProgressView()
