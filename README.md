@@ -64,14 +64,88 @@
 ## System Diagram App Launch Flow
 
 ```mermaid
-graph TD
+graph TD;
+    style App fill:#F9F9F9, stroke:#333, stroke-width:1px;
+    style Views fill:#E6E6E6, stroke:#333, stroke-width:1px;
+    style Models fill:#F0E5DE, stroke:#333, stroke-width:1px;
+    style ViewModels fill:#FFD7A5, stroke:#333, stroke-width:1px;
+    style Coordinators fill:#FFAC81, stroke:#333, stroke-width:1px;
+    style AbstractFactory fill:#C7CEEA, stroke:#333, stroke-width:1px;
+    style Dependcy fill:#A0CED9, stroke:#333, stroke-width:1px;
+    
+    subgraph App
 
-A[APP] ---> |On launch |B[Coordinator]
-A --> |Depedency| AA[Networking Library]
-B --> C[App Content Factory]
-C --> D[ViewModel]
-C ---> E[View]
-D ---> F[Model]
+        subgraph legends
+        A[ ] --> M(DirectInit)
+        B[ ] -.-> DependentItem
+        end
+        
+        subgraph Views
+            feedView[View: Feed]
+            detailView[View: Detail]
+            profileView[View: Profile]
+            apiStateView[View: FirstApiState]
+            imageView
+            VideoView
+        end
+
+        subgraph Models
+            feedModel[Model: Feed]
+            detailModel[Model: Detail]
+            profileModel[Model: Profile]
+        end
+
+        subgraph ViewModels
+            apiStateViewModel[ViewModel: FirstApiState]
+            feedViewModel[ViewModel: Feed]
+            detailViewModel[ViewModel: Detail]
+            profileViewModel[ViewModel: Profile]
+        end
+
+        subgraph Coordinators
+            feedCoordinator[Coordinator: Feed]
+            detailCoordinator[Coordinator: Detail]
+            profileCoordinator[Coordinator: Profile]
+        end
+
+        subgraph AbstractFactory
+            feedFactory[Factory: Feed]
+            detailFactory[Factory: Detail]
+            profileFactory[Factory: Profile]
+        end
+
+        subgraph Dependcy
+            di[Networking]
+        end
+
+        apiStateView ----> apiStateViewModel
+
+        ViewModels --> Models
+
+        AbstractFactory ----> ViewModels
+        AbstractFactory --> Views
+
+        Coordinators --> AbstractFactory
+
+        feedCoordinator --> detailCoordinator
+        detailCoordinator --> profileCoordinator
+        profileCoordinator --> detailCoordinator
+
+        feedView & profileView & detailView -->imageView
+        detailView --> VideoView
+
+        feedViewModel & detailViewModel & profileViewModel --> apiStateViewModel
+        Dependcy -.-> ViewModels
+        Dependcy --> Coordinators
+        Dependcy -.-> AbstractFactory
+        Views -.-> ViewModels
+    
+    end
+
+
+    
+
+    
 
 
 
