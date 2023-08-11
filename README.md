@@ -67,8 +67,8 @@
 graph TD
 
 A[APP] --> |On launch |B[Coordinator]
-A --> |Depedency| AA[Networking]
-B --> C[Coordinator Factory]
+A --> |Depedency| AA[Networking Library]
+B --> C[App Content Factory]
 C --> D[ViewModel]
 C --> E[View]
 D --> F[Model]
