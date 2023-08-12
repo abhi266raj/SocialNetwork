@@ -115,14 +115,17 @@ graph TD;
         end
 
         subgraph Dependcy
-            di[Networking]
+            Networking[Networking]
         end
 
-        apiStateView ----> apiStateViewModel
+        ApSingleton[AppLaunch] --> Dependcy
+        ApSingleton --> Coordinators
+
+        apiStateView --> apiStateViewModel 
 
         ViewModels --> Models
 
-        AbstractFactory ----> ViewModels
+        AbstractFactory --> ViewModels
         AbstractFactory --> Views
 
         Coordinators --> AbstractFactory
@@ -135,18 +138,12 @@ graph TD;
         detailView --> VideoView
 
         feedViewModel & detailViewModel & profileViewModel --> apiStateViewModel
-        Dependcy -.-> ViewModels
-        Dependcy --> Coordinators
-        Dependcy -.-> AbstractFactory
-        Views -.-> ViewModels
+       
+        Coordinators .-> Dependcy
+        AbstractFactory .-> Dependcy 
+        Views .-> ViewModels
+        ViewModels .-> Networking
+      
     
     end
-
-
-    
-
-    
-
-
-
-
+```
