@@ -8,15 +8,17 @@
 import Foundation
 import Service
 import OSLog
+import ViewModel
 
 class NetworkLoggingProxy: NetworkService {
     let logger = Logger(subsystem: "VideoViewer", category: "Networking")
     func fetchUsing<T>(_ object: T) async throws -> T.ResponseObject.ModelObject where T : Service.NetworkObject {
-       
-        logger.info("Making Request")
+        let request = "\(object.requestBuilder)"
+            logger.log("Making Request \(request, privacy: .private)")
         do {
             let result =  try await realObject.fetchUsing(object)
-            logger.info("Request Fetched")
+            let response = "\(result)"
+            logger.info("Response Fetched  for \(request, privacy: .private) as \(response, privacy: .private)")
             return result
         }catch {
             logger.error("\(error)")
@@ -28,5 +30,12 @@ class NetworkLoggingProxy: NetworkService {
     
     init(_ realObject: NetworkService) {
         self.realObject = realObject
+    }
+}
+
+
+extension APIRequest: CustomStringConvertible {
+    public var description: String {
+        self.createRequest().description
     }
 }
