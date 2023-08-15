@@ -105,6 +105,9 @@ private struct LikeButtonView: View {
                 .aspectRatio(contentMode: .fit)
                 .foregroundColor(isLiked ? .red : .gray)
                 .scaleEffect(animate ? 1.05 : 1.0)
+                .symbolEffect(.bounce,
+                              options: .repeat(2),
+                              value: isLiked)
                 
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
