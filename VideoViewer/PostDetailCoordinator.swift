@@ -8,6 +8,7 @@
 import ViewModel
 import View
 import SwiftUI
+import Observation
 
 struct PostDetailContentFactory : AppContentFactory {
    
@@ -27,31 +28,36 @@ struct PostDetailContentFactory : AppContentFactory {
 }
 
 class PostDetailCoordinator: AppCoordinator<PostDetailContentFactory> {
-    
-    private var profileCoordinator:ProfileCoordinator? = nil
-        
+   
     convenience init(_ postId: Int, appDependecy: AppDependency) {
         let factory = PostDetailContentFactory(appDependecy: appDependecy, postId: String(postId))
         self.init(contentBuilder: factory)
     }
-    
-    override func createView() -> AnyView {
-        AnyView(self.view.sheet(isPresented: $viewModel.selectedUser) {
-            self.viewModel.selectedUser  = false
-        } content: { [weak self] in
-            self?.getCoordinator(user: self?.viewModel.post?.user ?? "").createView()
-        })
-    }
-    
-    func getCoordinator(user: String) -> ProfileCoordinator {
-        if let coordinator =  profileCoordinator {
-            return coordinator
-        }
         
-        let coordinator  = ProfileCoordinator(user, appDependecy: appDependecy)
-        profileCoordinator = coordinator
-        return coordinator
+    private var temp: Any?
+    
+    override func addObservation() {
+        
+        temp =  withObservationTracking {
+            return self.viewModel.selectedUser
+        } onChange: { [self] in
+            // guard let self else {return}
+            DispatchQueue.main.async {
+                self.update()
+                self.addObservation()
+            }
+         }
     }
+    
+    func update() {
+        if self.viewModel.selectedUser,
+        let user = self.viewModel.post?.user {
+            let c = ProfileCoordinator(user, appDependecy: self.appDependecy)
+            self.appDependecy.controller.navigationPath.append(c)
+        }
+    }
+    
+    
 }
 
 

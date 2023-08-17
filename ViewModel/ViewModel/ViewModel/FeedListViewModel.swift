@@ -91,6 +91,7 @@ import Service
     }
     
     public func postSelected() {
+        print("ViewModel Tapped Called")
         onTap?(self)
     }
     

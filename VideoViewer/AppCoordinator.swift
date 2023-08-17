@@ -11,23 +11,33 @@ import SwiftUI
 
 class AppCoordinator<T: AppContentFactory>: Coordinator {
     
+    static func == (lhs: AppCoordinator<T>, rhs: AppCoordinator<T>) -> Bool {
+        return false
+    }
+    
+    
     typealias ContentBuilder = T
    
-    @Bindable var viewModel: ContentBuilder.ViewModelElement
-    let view: ContentBuilder.ViewElement
-    var appDependecy: AppDependency
+    var viewModel: ContentBuilder.ViewModelElement
+    var contentBuilder: ContentBuilder
+    var appDependecy: AppDependency {
+        contentBuilder.appDependecy
+    }
     private var detailCoordinator:PostDetailCoordinator? = nil
   
     required init(contentBuilder: ContentBuilder) {
         let viewModel = contentBuilder.createViewModel()
-        let view = contentBuilder.createView(from: viewModel)
         self.viewModel = viewModel
-        self.view = view
-        self.appDependecy = contentBuilder.appDependecy
+        self.contentBuilder = contentBuilder
+        self.addObservation()
     }
     
-    func createView() -> AnyView {
-        AnyView(self.view)
+    var view: ContentBuilder.ViewElement  {
+        contentBuilder.createView(from: viewModel)
+    }
+        
+    func addObservation() {
+        
     }
 }
 

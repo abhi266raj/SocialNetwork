@@ -8,7 +8,7 @@
 import ViewModel
 import View
 import SwiftUI
-
+import Observation
 
 
 struct ProfileContentFactory: AppContentFactory {
@@ -37,24 +37,25 @@ class ProfileCoordinator: AppCoordinator<ProfileContentFactory> {
         self.init(contentBuilder: factory)
     }
     
-    override func createView() -> AnyView {
-        AnyView(self.view.sheet(item: $viewModel.selectedViewModel) {
-            [weak self] in
-            self?.viewModel.selectedViewModel = nil
-            self?.detailCoordinator = nil
-        } content: { [weak self]  post in
-            self?.getCoordinator(postId: post.id).createView()
-        })
+    private var temp: Any?
+    
+    override func addObservation() {
+        
+        temp =  withObservationTracking {
+            return self.viewModel.selectedViewModel
+        } onChange: {
+            DispatchQueue.main.async { [weak self] in
+                self?.update()
+                self?.addObservation()
+            }
+         }
     }
     
-    func getCoordinator(postId: Int) -> PostDetailCoordinator {
-        if let coordinator =  detailCoordinator {
-            return coordinator
+    func update() {
+        if let model = self.viewModel.selectedViewModel {
+            let c = PostDetailCoordinator(model.id, appDependecy: self.appDependecy)
+            self.appDependecy.controller.navigationPath.append(c)
         }
-        
-        let coordinator  = PostDetailCoordinator(postId, appDependecy: appDependecy)
-        detailCoordinator = coordinator
-        return coordinator
     }
 }
 
