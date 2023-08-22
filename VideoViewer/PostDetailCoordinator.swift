@@ -53,7 +53,7 @@ class PostDetailCoordinator: AppCoordinator<PostDetailContentFactory> {
         if self.viewModel.selectedUser,
         let user = self.viewModel.post?.user {
             let c = ProfileCoordinator(user, appDependecy: self.appDependecy)
-            self.appDependecy.controller.navigationPath.append(c)
+            self.appDependecy.controller.push(c)
         }
     }
     

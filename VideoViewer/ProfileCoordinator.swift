@@ -54,7 +54,7 @@ class ProfileCoordinator: AppCoordinator<ProfileContentFactory> {
     func update() {
         if let model = self.viewModel.selectedViewModel {
             let c = PostDetailCoordinator(model.id, appDependecy: self.appDependecy)
-            self.appDependecy.controller.navigationPath.append(c)
+            self.appDependecy.controller.push(c)
         }
     }
 }

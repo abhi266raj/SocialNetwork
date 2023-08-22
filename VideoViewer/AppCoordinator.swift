@@ -32,9 +32,9 @@ class AppCoordinator<T: AppContentFactory>: Coordinator {
         self.addObservation()
     }
     
-    var view: ContentBuilder.ViewElement  {
+    lazy var view: ContentBuilder.ViewElement = {
         contentBuilder.createView(from: viewModel)
-    }
+    }()
         
     func addObservation() {
         

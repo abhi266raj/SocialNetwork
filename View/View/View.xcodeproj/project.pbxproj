@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B1626A42A952565000711A0 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 6B1626A32A952565000711A0 /* SnapshotTesting */; };
+		6B1626A62A9525D1000711A0 /* FirstViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1626A52A9525D1000711A0 /* FirstViewTest.swift */; };
 		6B2664EC2A86BD7D00A88532 /* ViewModel.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B72442B2A83BF500034BC6B /* ViewModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B3712282A81055700987BB0 /* CacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3712272A81055700987BB0 /* CacheImage.swift */; };
 		6B7243AE2A8138060034BC6B /* FirstApiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7243AD2A8138060034BC6B /* FirstApiView.swift */; };
@@ -73,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6B1626A52A9525D1000711A0 /* FirstViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewTest.swift; sourceTree = "<group>"; };
 		6B3712272A81055700987BB0 /* CacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImage.swift; sourceTree = "<group>"; };
 		6B7243AD2A8138060034BC6B /* FirstApiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstApiView.swift; sourceTree = "<group>"; };
 		6B7244252A83BF500034BC6B /* ViewModel.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ViewModel.xcodeproj; path = /Users/abhiraj/Documents/code/SwiftPractise/VideoViewer/Subproject/../ViewModel/ViewModel/ViewModel.xcodeproj; sourceTree = "<absolute>"; };
@@ -103,6 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BC07A332A7E4F4800EC410A /* View.framework in Frameworks */,
+				6B1626A42A952565000711A0 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				6BC07A372A7E4F4800EC410A /* ViewTests.swift */,
+				6B1626A52A9525D1000711A0 /* FirstViewTest.swift */,
 			);
 			path = ViewTests;
 			sourceTree = "<group>";
@@ -200,6 +205,8 @@
 			dependencies = (
 			);
 			name = View;
+			packageProductDependencies = (
+			);
 			productName = View;
 			productReference = 6BC07A2A2A7E4F4800EC410A /* View.framework */;
 			productType = "com.apple.product-type.framework";
@@ -218,6 +225,9 @@
 				6BC07A352A7E4F4800EC410A /* PBXTargetDependency */,
 			);
 			name = ViewTests;
+			packageProductDependencies = (
+				6B1626A32A952565000711A0 /* SnapshotTesting */,
+			);
 			productName = ViewTests;
 			productReference = 6BC07A322A7E4F4800EC410A /* ViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -250,6 +260,9 @@
 				Base,
 			);
 			mainGroup = 6BC07A202A7E4F4800EC410A;
+			packageReferences = (
+				6B1626A22A952565000711A0 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 6BC07A2B2A7E4F4800EC410A /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -322,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B7243BE2A83AE380034BC6B /* ViewTests.swift in Sources */,
+				6B1626A62A9525D1000711A0 /* FirstViewTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +607,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6B1626A22A952565000711A0 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6B1626A32A952565000711A0 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B1626A22A952565000711A0 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6BC07A212A7E4F4800EC410A /* Project object */;
 }

@@ -23,6 +23,11 @@ private struct VideoViewerApp: App {
                 VStack {
                     AppLaunchView(item: AnyView(rootCoordinator.view))
                 }
+            }.sheet( isPresented: $controller.isPresented) {
+                controller.presentedCoordinator = nil
+            } content: {
+                    controller.presentedCoordinator?.anyView
+                
             }
         }
     }
@@ -31,6 +36,36 @@ private struct VideoViewerApp: App {
 @Observable
 class Controller {
     var navigationPath = NavigationPath()
+    
+    func push<T:Coordinator>(_ item:T) {
+        if (self.presentedCoordinator != nil) {
+            self.isPresented = false
+            DispatchQueue.main.async {
+                self.push(item)
+            }
+            return
+        }
+        navigationPath.append(item)
+    }
+    
+    @ObservationIgnored
+    var presentedCoordinator: (any Coordinator)? = nil {
+        didSet {
+            if presentedCoordinator == nil {
+                isPresented = false
+            }else {
+                isPresented = true
+            }
+        }
+    }
+    var isPresented = false
+    
+}
+
+extension Coordinator {
+    var anyView:AnyView {
+        AnyView(view)
+    }
 }
 
 

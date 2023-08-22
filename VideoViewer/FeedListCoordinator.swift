@@ -50,7 +50,8 @@ class FeedListCoordinator: AppCoordinator<FeedContentFactory> {
     func update() {
         if let model = self.viewModel.selectedPostViewModel {
             let c = PostDetailCoordinator(model.id, appDependecy: self.appDependecy)
-            self.appDependecy.controller.navigationPath.append(c)
+            //self.appDependecy.controller.navigationPath.append(c)
+            self.appDependecy.controller.presentedCoordinator = c
         }
         
     }
