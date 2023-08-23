@@ -35,7 +35,6 @@ final class FirstViewTests: XCTestCase {
     @MainActor func testLoadedState() throws {
         viewModel.firstApiViewModel.state = .success
         assertSnapshot(matching: testView, as: .image)
-        
     }
     
     @MainActor func testFailureState() throws {
