@@ -22,10 +22,10 @@ public class MockNetworkService: NetworkService {
         return nil
     }()
     
-    fileprivate func string(jsonFilePath:String) -> String? {
+    fileprivate func data(jsonFilePath: String) -> Data? {
         if let jsonPath = bundle?.path(forResource: jsonFilePath, ofType: "json"),
-           let item = try? String(contentsOfFile: jsonPath, encoding: .utf8) {
-            return item
+           let jsonData = try? Data(contentsOf: URL(fileURLWithPath: jsonPath)) {
+            return jsonData
         }
         return nil
     }
@@ -34,27 +34,19 @@ public class MockNetworkService: NetworkService {
     public func fetchUsing<T: NetworkObject>(_ object: T) async throws -> T.ResponseObject.ModelObject {
         let url = object.requestBuilder.createRequest().url
         if let path = url?.path {
-            print(path)
-            if let string = string(jsonFilePath: path) {
+            print("Resource path: \(path)")
+            
+            if let data = data(jsonFilePath: path) {
                 do {
-                    let data = try await convertJSONStringToData(jsonString: string)
                     return try object.responseBuilder.createResponse(data)
                 } catch {
                     throw error
                 }
-                
             }
         }
         
-        throw URLError(URLError.badURL)
+        throw URLError(.resourceUnavailable)
     }
     
-    private func convertJSONStringToData(jsonString: String) async throws -> Data {
-        guard let jsonData = jsonString.data(using: .utf8) else {
-            let description = NSLocalizedString("Invalid JSON format", comment: "JSON parsing error")
-                throw NSError(domain: "YourDomain", code: 1, userInfo: [NSLocalizedDescriptionKey: description])
-        }
-        return jsonData
-    }
 }
 
