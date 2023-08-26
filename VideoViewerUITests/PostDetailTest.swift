@@ -12,9 +12,8 @@ final class PostDetailTest: XCTestCase {
 
     override func setUpWithError() throws {
         continueAfterFailure = false
+        app.launchArguments = ["-openURL", "www.google.com/post/1"]
         app.launch()
-        let page = DetailPage()
-        page.create(app: app)
     }
 
     func testLikeButton() throws {

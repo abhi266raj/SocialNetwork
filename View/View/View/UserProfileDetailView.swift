@@ -49,6 +49,6 @@ public struct UserProfileDetailView: View {
 
 #Preview {
     VStack {
-        UserProfileDetailView(viewModel: ProfileDetailViewModel(userName: "1", networkService: MockNetworkService().detailApi()))
+        UserProfileDetailView(viewModel: ProfileDetailViewModel(userName: "1", networkService: MockNetworkService()))
     }
 }

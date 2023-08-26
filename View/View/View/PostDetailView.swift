@@ -117,13 +117,13 @@ private struct LikeButtonView: View {
 
 #Preview {
     VStack {
-        PostDetailView(viewModel: PostDetailViewModel(postId: "1", networkService: MockNetworkService().profileApi()))
+        PostDetailView(viewModel: PostDetailViewModel(postId: "1", networkService: MockNetworkService()))
     }
 }
 
 #Preview("Error") {
     VStack {
-        PostDetailView(viewModel: PostDetailViewModel(postId: "1", networkService: MockNetworkService()))
+        PostDetailView(viewModel: PostDetailViewModel(postId: "3", networkService: MockNetworkService()))
     }
 }
 

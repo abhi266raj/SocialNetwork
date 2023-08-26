@@ -13,8 +13,11 @@ final class ProfileTest: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
         app.launch()
-        let page = ProfilePage()
-        page.create(app: app)
+      //  let url = URL(string:"www.google.com/profile/100")!
+      //  app.open(url)
+        
+       // let page = ProfilePage()
+       // page.create(app: app)
     }
 
     override func tearDownWithError() throws {

@@ -33,7 +33,7 @@ public struct FeedView: View {
 #Preview {
     {
         VStack {
-            FeedView(viewModel: FeedListViewModel(networkService: MockNetworkService().feedAPI()))
+            FeedView(viewModel: FeedListViewModel(networkService: MockNetworkService()))
         }
         
     }()

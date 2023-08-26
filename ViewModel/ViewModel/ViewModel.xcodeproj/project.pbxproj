@@ -15,6 +15,8 @@
 		6B2664F52A86BDE100A88532 /* Service.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B7244222A83BF360034BC6B /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B7243AC2A8129E60034BC6B /* APIResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7243AB2A8129E60034BC6B /* APIResultViewModel.swift */; };
 		6B72444F2A83CB0A0034BC6B /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B72444C2A83C7BB0034BC6B /* MockNetworkService.swift */; };
+		6B96DB832A99B26A00BE4C82 /* JsonAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B96DB822A99B26A00BE4C82 /* JsonAsset.xcassets */; };
+		6B96DB872A99B45C00BE4C82 /* Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6B96DB862A99B45C00BE4C82 /* Bundle.bundle */; };
 		6BC07A5E2A7E4F7600EC410A /* ViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC07A552A7E4F7600EC410A /* ViewModel.framework */; };
 		6BC07A632A7E4F7600EC410A /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC07A622A7E4F7600EC410A /* ViewModelTests.swift */; };
 		6BC07A642A7E4F7600EC410A /* ViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BC07A582A7E4F7600EC410A /* ViewModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -107,6 +109,8 @@
 		6B72440D2A83BF0A0034BC6B /* Model.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Model.xcodeproj; path = ../../Model/Model/Model.xcodeproj; sourceTree = "<group>"; };
 		6B72441C2A83BF360034BC6B /* Service.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Service.xcodeproj; path = /Users/abhiraj/Documents/code/SwiftPractise/VideoViewer/Subproject/../Service/Service/Service.xcodeproj; sourceTree = "<absolute>"; };
 		6B72444C2A83C7BB0034BC6B /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		6B96DB822A99B26A00BE4C82 /* JsonAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = JsonAsset.xcassets; sourceTree = "<group>"; };
+		6B96DB862A99B45C00BE4C82 /* Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Bundle.bundle; sourceTree = "<group>"; };
 		6BC07A552A7E4F7600EC410A /* ViewModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViewModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC07A582A7E4F7600EC410A /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
 		6BC07A5D2A7E4F7600EC410A /* ViewModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				6B72444C2A83C7BB0034BC6B /* MockNetworkService.swift */,
+				6B96DB822A99B26A00BE4C82 /* JsonAsset.xcassets */,
+				6B96DB862A99B45C00BE4C82 /* Bundle.bundle */,
 			);
 			path = "Development Assets";
 			sourceTree = "<group>";
@@ -275,6 +281,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
@@ -352,6 +361,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B96DB832A99B26A00BE4C82 /* JsonAsset.xcassets in Resources */,
+				6B96DB872A99B45C00BE4C82 /* Bundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,7 +550,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_ASSET_PATHS = "ViewModel/Development\\ Assets";
+				DEVELOPMENT_ASSET_PATHS = "ViewModel/Development\\ Assets/Bundle.bundle ViewModel/Development\\ Assets";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -575,7 +586,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_ASSET_PATHS = "ViewModel/Development\\ Assets";
+				DEVELOPMENT_ASSET_PATHS = "ViewModel/Development\\ Assets/Bundle.bundle ViewModel/Development\\ Assets";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
